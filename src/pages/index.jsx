@@ -10,21 +10,17 @@ import Pipeline from "./Pipeline";
 
 import RiskManagement from "./RiskManagement";
 
+// import InsightsAlerts from "./InsightsAlerts";
+
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 const PAGES = {
-    
     Dashboard: Dashboard,
-    
     Merchants: Merchants,
-    
     CommissionReports: CommissionReports,
-    
     Pipeline: Pipeline,
-    
-    RiskManagement: RiskManagement,
-    
-}
+    RiskManagement: RiskManagement
+};
 
 function _getCurrentPage(url) {
     if (url.endsWith('/')) {
@@ -43,27 +39,28 @@ function _getCurrentPage(url) {
 function PagesContent() {
     const location = useLocation();
     const currentPage = _getCurrentPage(location.pathname);
-    
-    return (
-        <Layout currentPageName={currentPage}>
-            <Routes>            
-                
+    try {
+        return (
+            <Layout currentPageName={currentPage}>
+                <Routes>            
                     <Route path="/" element={<Dashboard />} />
-                
-                
-                <Route path="/Dashboard" element={<Dashboard />} />
-                
-                <Route path="/Merchants" element={<Merchants />} />
-                
-                <Route path="/CommissionReports" element={<CommissionReports />} />
-                
-                <Route path="/Pipeline" element={<Pipeline />} />
-                
-                <Route path="/RiskManagement" element={<RiskManagement />} />
-                
-            </Routes>
-        </Layout>
-    );
+                    <Route path="/Dashboard" element={<Dashboard />} />
+                    <Route path="/Merchants" element={<Merchants />} />
+                    <Route path="/CommissionReports" element={<CommissionReports />} />
+                    <Route path="/Pipeline" element={<Pipeline />} />
+                    <Route path="/RiskManagement" element={<RiskManagement />} />
+                </Routes>
+            </Layout>
+        );
+    } catch (error) {
+        return (
+            <div style={{ color: 'red', padding: 32 }}>
+                <h2>Runtime error in PagesContent:</h2>
+                <pre>{error.message}</pre>
+                <pre>{error.stack}</pre>
+            </div>
+        );
+    }
 }
 
 export default function Pages() {

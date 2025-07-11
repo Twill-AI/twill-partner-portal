@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
@@ -9,11 +8,13 @@ import {
   DollarSign, 
   Users, 
   TrendingUp,
+  Bell,
   Shield,
   FileText,
   Settings
 } from "lucide-react";
 import { CompactDataSourceToggle } from "@/components/ui/DataSourceToggle";
+import { TwillPaymentLogoFull } from "@/components/ui/TwillLogo";
 import {
   Sidebar,
   SidebarContent,
@@ -46,6 +47,11 @@ const navigationItems = [
     icon: DollarSign,
   },
   {
+    title: "Insights & Alerts",
+    url: createPageUrl("InsightsAlerts"),
+    icon: Bell,
+  },
+  {
     title: "Pipeline",
     url: createPageUrl("Pipeline"),
     icon: Users,
@@ -64,30 +70,21 @@ export default function Layout({ children, currentPageName }) {
 
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-gray40">
-        <Sidebar className="border-r border-gray40 bg-white">
+      <div className="min-h-screen flex w-full linear-background">
+        <Sidebar className="border-r border-gray40 bg-card">
           <SidebarHeader className="border-b border-gray40 p-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <img src="/twill-logo.svg" alt="Twill AI" className="w-8 h-8" />
-              </div>
-              <div>
-                <h2 className="font-bold text-black50 text-lg">Twill Partner Hub</h2>
-                <p className="text-xs text-gray100 font-medium">Partner Dashboard</p>
-              </div>
+            <div className="flex items-center justify-center">
+              <TwillPaymentLogoFull className="h-10 w-auto" />
             </div>
           </SidebarHeader>
           
           <SidebarContent className="p-4">
             <SidebarGroup>
-              <SidebarGroupLabel className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-2">
-                Navigation
-              </SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu className="space-y-1">
                   {navigationItems.map((item) => {
-                    // Disable Pipeline and Risk Management in PayEngine mode
-                    const isDisabled = isPayEngineMode && (item.title === 'Pipeline' || item.title === 'Risk Management');
+                    // Disable Pipeline, Risk Management, and Insights & Alerts in PayEngine mode
+                    const isDisabled = isPayEngineMode && (item.title === 'Pipeline' || item.title === 'Risk Management' || item.title === 'Insights & Alerts');
                     
                     return (
                       <SidebarMenuItem key={item.title}>
@@ -95,9 +92,9 @@ export default function Layout({ children, currentPageName }) {
                           asChild={!isDisabled}
                           className={`transition-all duration-200 rounded-lg ${
                             isDisabled 
-                              ? 'text-slate-400 cursor-not-allowed opacity-50'
-                              : `hover:bg-blue-50 hover:text-blue-700 ${
-                                  location.pathname === item.url ? 'bg-blue-50 text-blue-700 shadow-sm' : 'text-slate-600'
+                              ? 'text-gray100 cursor-not-allowed opacity-50'
+                              : `hover:bg-azure100/10 hover:text-azure100 ${
+                                  location.pathname === item.url ? 'bg-azure100/10 text-azure100 shadow-sm' : 'text-black50'
                                 }`
                           }`}
                         >
@@ -121,7 +118,7 @@ export default function Layout({ children, currentPageName }) {
             </SidebarGroup>
           </SidebarContent>
 
-          <SidebarFooter className="border-t border-slate-100 p-4 space-y-3">
+          <SidebarFooter className="border-t border-gray40 p-4 space-y-3">
             {/* Data Source Toggle */}
             <div className="px-2">
               <CompactDataSourceToggle className="w-full justify-center" />
@@ -129,27 +126,25 @@ export default function Layout({ children, currentPageName }) {
             
             {/* User Info */}
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-azure100 to-periwinkle50 rounded-full flex items-center justify-center">
                 <span className="text-white font-semibold text-sm">P</span>
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-semibold text-slate-900 text-sm truncate">Partner User</p>
-                <p className="text-xs text-slate-500 truncate">Sales Team</p>
+                <p className="font-semibold text-black50 text-sm truncate">Partner User</p>
+                <p className="text-xs text-gray100 truncate">Sales Team</p>
               </div>
             </div>
           </SidebarFooter>
         </Sidebar>
 
-        <main className="flex-1 flex flex-col">
-          <header className="bg-white border-b border-slate-200 px-6 py-4 md:hidden">
-            <div className="flex items-center gap-4">
-              <SidebarTrigger className="hover:bg-slate-100 p-2 rounded-lg transition-colors duration-200" />
-              <h1 className="text-xl font-bold text-slate-900">Twill Portal</h1>
-            </div>
+        <main className="flex-1 flex flex-col linear-background">
+          <header className="bg-card border-b border-gray40 px-6 py-4 md:hidden">
+            <h1 className="text-xl font-semibold text-black50">{currentPageName}</h1>
           </header>
-
-          <div className="flex-1 overflow-auto bg-slate-50">
-            {children}
+          <div className="flex-1 overflow-auto px-4 md:px-8 pb-8">
+            <div className="max-w-[2000px] w-full h-full">
+              {children}
+            </div>
           </div>
         </main>
       </div>

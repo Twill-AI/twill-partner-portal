@@ -1,0 +1,11 @@
+# Page snapshot
+
+```yaml
+- text: "[plugin:vite:import-analysis] Failed to resolve import \"./InsightsAlerts\" from \"src/pages/index.jsx\". Does the file exist? /Users/naderatrchin/CascadeProjects/twill-partner-portal/src/pages/index.jsx:13:27 22 | import Pipeline from \"./Pipeline\"; 23 | import RiskManagement from \"./RiskManagement\"; 24 | import InsightsAlerts from \"./InsightsAlerts\"; | ^ 25 | import { BrowserRouter as Router, Route, Routes, useLocation } from \"react-router-dom\"; 26 | const PAGES = { at TransformPluginContext._formatLog (file:///Users/naderatrchin/CascadeProjects/twill-partner-portal/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41) at TransformPluginContext.error (file:///Users/naderatrchin/CascadeProjects/twill-partner-portal/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16) at normalizeUrl (file:///Users/naderatrchin/CascadeProjects/twill-partner-portal/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23) at process.processTicksAndRejections (node:internal/process/task_queues:95:5) at async file:///Users/naderatrchin/CascadeProjects/twill-partner-portal/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37 at async Promise.all (index 9) at async TransformPluginContext.transform (file:///Users/naderatrchin/CascadeProjects/twill-partner-portal/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7) at async EnvironmentPluginContainer.transform (file:///Users/naderatrchin/CascadeProjects/twill-partner-portal/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18) at async loadAndTransform (file:///Users/naderatrchin/CascadeProjects/twill-partner-portal/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27) at async viteTransformMiddleware (file:///Users/naderatrchin/CascadeProjects/twill-partner-portal/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24 Click outside, press Esc key, or fix the code to dismiss. You can also disable this overlay by setting"
+- code: server.hmr.overlay
+- text: to
+- code: "false"
+- text: in
+- code: vite.config.js
+- text: .
+```

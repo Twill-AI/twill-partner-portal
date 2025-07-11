@@ -74,9 +74,46 @@ button:focus-visible {
 
 
 
+/* Beautiful gradient background from Twill AI UI */
+body {
+  background: linear-gradient(
+      281deg,
+      rgba(236, 205, 47, 0.2) -64.11%,
+      rgba(206, 207, 196, 0.2) -18.7%,
+      rgba(255, 243, 202, 0.2) 50.62%,
+      rgba(208, 194, 73, 0.2) 119.94%
+    ),
+    #f3f6f8;
+  min-height: 100vh;
+}
+
+.linear-background {
+  background: linear-gradient(
+      281deg,
+      rgba(236, 205, 47, 0.2) -64.11%,
+      rgba(206, 207, 196, 0.2) -18.7%,
+      rgba(255, 243, 202, 0.2) 50.62%,
+      rgba(208, 194, 73, 0.2) 119.94%
+    ),
+    #f3f6f8;
+}
+
+@media (min-width: 960px) {
+  .linear-background {
+    background: linear-gradient(
+        276deg,
+        rgba(236, 205, 47, 0.2) 14.34%,
+        rgba(206, 207, 196, 0.2) 34.56%,
+        rgba(255, 243, 202, 0.2) 65.44%,
+        rgba(208, 194, 73, 0.2) 96.32%
+      ),
+      #f3f6f8;
+  }
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 210 17% 97%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;

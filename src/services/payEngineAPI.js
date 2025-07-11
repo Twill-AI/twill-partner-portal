@@ -48,7 +48,7 @@ class PayEngineAPIService {
     };
 
     if (this.apiKey && this.apiKey !== 'demo_token_replace_with_actual') {
-      headers['Authorization'] = `Bearer ${this.apiKey}`;
+      headers['Authorization'] = `Basic ${this.apiKey}`;
     }
 
     return headers;
@@ -81,11 +81,7 @@ class PayEngineAPIService {
     let url = `${this.baseURL}/api${endpoint}`;
     const config = {
       method: method,
-      headers: {
-        'Authorization': `Basic ${this.apiKey}`,
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
+      headers: this.getHeaders()
     };
 
     // Add params as query string for GET requests

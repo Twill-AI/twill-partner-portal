@@ -62,10 +62,10 @@ export default function Pipeline() {
     <div className="p-6 space-y-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-slate-900">Sales Pipeline</h1>
-          <p className="text-slate-500">Track merchant progress and performance analytics</p>
+          <h1 className="text-3xl font-bold text-black50">Sales Pipeline</h1>
+          <p className="text-gray100">Track merchant progress and performance analytics</p>
         </div>
-        <Button className="bg-blue-600 hover:bg-blue-700">
+        <Button className="bg-azure100 hover:bg-black100">
           <Plus className="w-4 h-4 mr-2" />
           Add New Lead
         </Button>
@@ -74,43 +74,43 @@ export default function Pipeline() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <Card className="border-0 shadow-lg">
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg font-semibold text-slate-900">Total Pipeline Value</CardTitle>
+            <CardTitle className="text-lg font-semibold text-black50">Total Pipeline Value</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-slate-900">${totalValue.toLocaleString()}</p>
-            <p className="text-sm text-slate-500 mt-1">Annual processing volume</p>
+            <p className="text-3xl font-bold text-black50">${totalValue.toLocaleString()}</p>
+            <p className="text-sm text-gray100 mt-1">Annual processing volume</p>
           </CardContent>
         </Card>
 
         <Card className="border-0 shadow-lg">
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg font-semibold text-slate-900">Conversion Rate</CardTitle>
+            <CardTitle className="text-lg font-semibold text-black50">Conversion Rate</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-slate-900">{conversionRate.toFixed(1)}%</p>
-            <p className="text-sm text-slate-500 mt-1">Lead to active</p>
+            <p className="text-3xl font-bold text-black50">{conversionRate.toFixed(1)}%</p>
+            <p className="text-sm text-gray100 mt-1">Lead to active</p>
           </CardContent>
         </Card>
 
         <Card className="border-0 shadow-lg">
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg font-semibold text-slate-900">Volume Realization</CardTitle>
+            <CardTitle className="text-lg font-semibold text-black50">Volume Realization</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-slate-900">
+            <p className="text-3xl font-bold text-black50">
               {totalProjectedVolume > 0 ? ((totalActualVolume / totalProjectedVolume) * 100).toFixed(1) : 0}%
             </p>
-            <p className="text-sm text-slate-500 mt-1">Actual vs projected</p>
+            <p className="text-sm text-gray100 mt-1">Actual vs projected</p>
           </CardContent>
         </Card>
 
         <Card className="border-0 shadow-lg">
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg font-semibold text-slate-900">Active Merchants</CardTitle>
+            <CardTitle className="text-lg font-semibold text-black50">Active Merchants</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-3xl font-bold text-slate-900">{getMerchantsByStage('active').length}</p>
-            <p className="text-sm text-slate-500 mt-1">Currently processing</p>
+            <p className="text-3xl font-bold text-black50">{getMerchantsByStage('active').length}</p>
+            <p className="text-sm text-gray100 mt-1">Currently processing</p>
           </CardContent>
         </Card>
       </div>
@@ -134,34 +134,34 @@ export default function Pipeline() {
                 <Card key={stage.key} className="border-0 shadow-lg">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
-                      <CardTitle className="text-lg font-semibold text-slate-900">{stage.label}</CardTitle>
+                      <CardTitle className="text-lg font-semibold text-black50">{stage.label}</CardTitle>
                       <Badge className={stage.color}>{stageMerchants.length}</Badge>
                     </div>
-                    <p className="text-sm text-slate-500">
+                    <p className="text-sm text-gray100">
                       ${stageValue.toLocaleString()} potential
                     </p>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3 max-h-96 overflow-y-auto">
                       {stageMerchants.slice(0, 5).map((merchant) => (
-                        <div key={merchant.id} className="p-3 rounded-lg bg-slate-50/50 hover:bg-slate-50 transition-colors">
+                        <div key={`merchant-${merchant.id || Math.random()}`} className="p-3 rounded-lg bg-slate-50/50 hover:bg-slate-50 transition-colors">
                           <div className="flex items-center justify-between">
                             <div className="flex-1 min-w-0">
-                              <p className="font-medium text-slate-900 truncate">{merchant.business_name}</p>
-                              <p className="text-sm text-slate-500">{merchant.business_type?.replace('_', ' ')}</p>
+                              <p className="font-medium text-black50 truncate">{merchant.business_name}</p>
+                              <p className="text-sm text-gray100">{merchant.business_type?.replace('_', ' ')}</p>
                             </div>
                             <Button variant="ghost" size="sm">
                               <Eye className="w-4 h-4" />
                             </Button>
                           </div>
-                          <p className="text-sm text-slate-600 mt-1">
+                          <p className="text-sm text-gray100 mt-1">
                             ${(merchant.annual_volume || merchant.projected_annual_volume || 0).toLocaleString()} annual
                           </p>
                         </div>
                       ))}
                       {stageMerchants.length > 5 && (
                         <div className="text-center pt-2">
-                          <Button variant="ghost" size="sm" className="text-blue-600">
+                          <Button variant="ghost" size="sm" className="text-azure100">
                             View all {stageMerchants.length} merchants
                           </Button>
                         </div>
@@ -175,7 +175,7 @@ export default function Pipeline() {
 
           <Card className="border-0 shadow-lg">
             <CardHeader>
-              <CardTitle className="text-lg font-semibold text-slate-900">Pipeline Flow</CardTitle>
+              <CardTitle className="text-lg font-semibold text-black50">Pipeline Flow</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex items-center justify-between overflow-x-auto">
@@ -185,10 +185,10 @@ export default function Pipeline() {
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
                         {getMerchantsByStage(stage.key).length}
                       </div>
-                      <p className="text-sm font-medium text-slate-900 mt-2 text-center">{stage.label}</p>
+                      <p className="text-sm font-medium text-black50 mt-2 text-center">{stage.label}</p>
                     </div>
                     {index < pipelineStages.length - 2 && (
-                      <ArrowRight className="w-6 h-6 text-slate-400 mx-2 flex-shrink-0" />
+                      <ArrowRight className="w-6 h-6 text-gray100 mx-2 flex-shrink-0" />
                     )}
                   </React.Fragment>
                 ))}

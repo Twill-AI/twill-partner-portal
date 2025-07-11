@@ -64,6 +64,34 @@ const transformMerchantData = (payEngineMerchant, feeSchedules = new Map()) => {
     return 'low';
   };
 
+  // Calculate fees based on fee schedule and merchant volume
+  const calculateMerchantFees = (merchant, feeSchedule) => {
+    if (!feeSchedule?.pricing) {
+      return {
+        monthly_fee: 0,
+        processing_fee: 0,
+        authorization_fee: 0,
+        total_monthly_fees: 0
+      };
+    }
+
+    const volume = merchant.monthly_volume || 0;
+    const transactionCount = merchant.transaction_count || Math.floor(volume / 100); // Estimate if not provided
+    const pricing = feeSchedule.pricing;
+
+    const monthlyFee = pricing.monthly_fee || 0;
+    const processingFee = (volume * (pricing.discount_rate / 100)) || 0;
+    const authorizationFee = (transactionCount * pricing.authorization_fee) || 0;
+    const totalMonthlyFees = monthlyFee + processingFee + authorizationFee;
+
+    return {
+      monthly_fee: monthlyFee,
+      processing_fee: processingFee,
+      authorization_fee: authorizationFee,
+      total_monthly_fees: totalMonthlyFees
+    };
+  };
+
   // Generate status messages for in_review merchants
   const STATUS_MESSAGES = [
     'Please provide 3 months bank statements.',
@@ -75,6 +103,11 @@ const transformMerchantData = (payEngineMerchant, feeSchedules = new Map()) => {
   const chargebackRate = payEngineMerchant.chargeback_rate || 0;
   const riskLevel = calculateRiskLevel(chargebackRate);
   
+  // Get fee schedule information
+  const feeScheduleId = payEngineMerchant.fee_schedule_id;
+  const feeSchedule = feeScheduleId ? feeSchedules.get(feeScheduleId) : null;
+  const fees = calculateMerchantFees(payEngineMerchant, feeSchedule);
+  
   return {
     merchant_id: payEngineMerchant.id || payEngineMerchant.merchant_id,
     business_name: payEngineMerchant.business_name || payEngineMerchant.name,
@@ -83,7 +116,7 @@ const transformMerchantData = (payEngineMerchant, feeSchedules = new Map()) => {
     status: payEngineMerchant.status || 'active',
     risk_level: riskLevel,
     monthly_volume: payEngineMerchant.monthly_volume || 0,
-    monthly_commission: payEngineMerchant.monthly_commission || 0,
+    monthly_commission: payEngineMerchant.monthly_commission || fees.total_monthly_fees,
     created_date: payEngineMerchant.created_at || payEngineMerchant.created_date,
     contact_email: payEngineMerchant.contact_email || payEngineMerchant.email,
     phone: payEngineMerchant.phone || '',
@@ -101,7 +134,13 @@ const transformMerchantData = (payEngineMerchant, feeSchedules = new Map()) => {
     notes: payEngineMerchant.notes || `Risk Level: ${riskLevel}`,
     status_message: payEngineMerchant.status === 'in_review' 
       ? STATUS_MESSAGES[Math.floor(Math.random() * STATUS_MESSAGES.length)]
-      : undefined
+      : undefined,
+    // Fee schedule information
+    fee_schedule_id: feeScheduleId,
+    fee_schedule_name: feeSchedule?.name || 'Standard',
+    fee_schedule: feeSchedule,
+    // Calculated fees
+    fees: fees
   };
 };
 
@@ -126,7 +165,7 @@ export const payEngineDataService = {
   feeSchedulesCache: new Map(),
   lastFeeSchedulesFetch: null,
 
-  // Fetch and cache fee schedules
+  // Fetch and cache fee schedules with full data
   async getFeeSchedules() {
     const now = Date.now();
     // Cache for 5 minutes
@@ -140,7 +179,16 @@ export const payEngineDataService = {
       
       if (response?.data) {
         response.data.forEach(fee => {
-          this.feeSchedulesCache.set(fee.id, fee.name);
+          // Store complete fee schedule data for calculations
+          this.feeSchedulesCache.set(fee.id, {
+            id: fee.id,
+            name: fee.name,
+            is_default: fee.is_default,
+            is_enabled: fee.is_enabled,
+            schedule_data: fee.schedule_data,
+            // Extract key pricing info for easy access
+            pricing: this.extractPricingInfo(fee.schedule_data)
+          });
         });
       }
       
@@ -151,6 +199,40 @@ export const payEngineDataService = {
       console.warn('Failed to fetch fee schedules:', error);
       return this.feeSchedulesCache;
     }
+  },
+
+  // Helper method to extract key pricing information
+  extractPricingInfo(scheduleData) {
+    if (!scheduleData) return null;
+    
+    const pricing = {
+      monthly_fee: 0,
+      authorization_fee: 0,
+      discount_rate: 0,
+      ach_enabled: false,
+      ach_rate: 0
+    };
+    
+    // Extract monthly fees
+    if (scheduleData.monthlyFees) {
+      pricing.monthly_fee = scheduleData.monthlyFees.reduce((sum, fee) => 
+        sum + parseFloat(fee.amount || 0), 0);
+    }
+    
+    // Extract card charges (use first card type for simplicity)
+    if (scheduleData.cardCharges && scheduleData.cardCharges.length > 0) {
+      const cardCharge = scheduleData.cardCharges[0];
+      pricing.authorization_fee = parseFloat(cardCharge.authorizationFee || 0);
+      pricing.discount_rate = parseFloat(cardCharge.defaultDiscountRate || 0);
+    }
+    
+    // Extract ACH info
+    if (scheduleData.achCharges && scheduleData.achCharges.length > 0) {
+      pricing.ach_enabled = true;
+      pricing.ach_rate = parseFloat(scheduleData.achCharges[0].rate || 0);
+    }
+    
+    return pricing;
   },
 
   // Merchant operations

@@ -13,15 +13,19 @@ Card.displayName = "Card"
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
-    {...props} />
+    className={cn(
+      "flex flex-col space-y-1.5 p-5 rounded-t-xl bg-gradient-to-b from-white via-gray40/20 to-gray40/40 border-b border-gray80/30 shadow-sm",
+      className
+    )}
+    {...props}
+  />
 ))
 CardHeader.displayName = "CardHeader"
 
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("font-semibold leading-none tracking-tight", className)}
+    className={cn("text-lg font-semibold tracking-normal text-black50 leading-tight", className)}
     {...props} />
 ))
 CardTitle.displayName = "CardTitle"

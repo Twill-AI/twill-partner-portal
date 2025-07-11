@@ -61,8 +61,8 @@ export default function RiskManagement() {
     <div className="p-6 space-y-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-slate-900">Risk Management</h1>
-          <p className="text-slate-500">Monitor merchant risk levels and processing issues</p>
+          <h1 className="text-3xl font-bold text-black50">Risk Management</h1>
+          <p className="text-gray100">Monitor merchant risk levels and processing issues</p>
         </div>
       </div>
 
@@ -85,13 +85,13 @@ export default function RiskManagement() {
             <Card key={risk.key} className="border-0 shadow-lg">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+                  <CardTitle className="text-lg font-semibold text-black50 flex items-center gap-2">
                     <risk.icon className="w-5 h-5" />
                     {risk.label}
                   </CardTitle>
                   <Badge className={risk.color}>{riskMerchants.length}</Badge>
                 </div>
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-gray100">
                   ${riskVolume.toLocaleString()} monthly volume
                 </p>
               </CardHeader>
@@ -103,7 +103,7 @@ export default function RiskManagement() {
       <div className="grid lg:grid-cols-2 gap-6">
         <Card className="border-0 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-lg font-semibold text-slate-900 flex items-center gap-2">
+            <CardTitle className="text-lg font-semibold text-black50 flex items-center gap-2">
               <AlertTriangle className="w-5 h-5 text-red-500" />
               High Priority Issues
             </CardTitle>
@@ -113,8 +113,8 @@ export default function RiskManagement() {
               {criticalMerchants.concat(highRiskMerchants).slice(0, 8).map((merchant) => (
                 <div key={merchant.id} className="flex items-center justify-between p-4 rounded-lg bg-red-50/50 border border-red-100">
                   <div className="flex-1">
-                    <p className="font-medium text-slate-900">{merchant.business_name}</p>
-                    <p className="text-sm text-slate-600">{merchant.business_type?.replace('_', ' ')}</p>
+                    <p className="font-medium text-black50">{merchant.business_name}</p>
+                    <p className="text-sm text-gray100">{merchant.business_type?.replace('_', ' ')}</p>
                     {merchant.risk_notes && (
                       <p className="text-sm text-red-600 mt-1">{merchant.risk_notes}</p>
                     )}
@@ -143,12 +143,12 @@ export default function RiskManagement() {
           <CardContent>
             <div className="space-y-4">
               <div className="p-4 rounded-lg bg-amber-50/50 border border-amber-100">
-                <h4 className="font-medium text-slate-900 mb-2">Stopped Processing ({stoppedProcessing.length})</h4>
-                <p className="text-sm text-slate-600">Merchants with no activity in 30+ days</p>
+                <h4 className="font-medium text-black50 mb-2">Stopped Processing ({stoppedProcessing.length})</h4>
+                <p className="text-sm text-gray100">Merchants with no activity in 30+ days</p>
               </div>
-              <div className="p-4 rounded-lg bg-blue-50/50 border border-blue-100">
-                <h4 className="font-medium text-slate-900 mb-2">Irregular Processing ({irregularProcessing.length})</h4>
-                <p className="text-sm text-slate-600">Active merchants with unusually low volume</p>
+              <div className="p-4 rounded-lg bg-gray40/50 border border-gray80">
+                <h4 className="font-medium text-black50 mb-2">Irregular Processing ({irregularProcessing.length})</h4>
+                <p className="text-sm text-gray100">Active merchants with unusually low volume</p>
               </div>
               <div className="p-4 rounded-lg bg-purple-50/50 border border-purple-100">
                 <h4 className="font-medium text-slate-900 mb-2">Pending Reviews (3)</h4>
@@ -166,16 +166,16 @@ export default function RiskManagement() {
         <CardContent>
           <div className="space-y-4">
             {merchants.filter(m => m.risk_notes).slice(0, 10).map((merchant) => (
-              <div key={merchant.id} className="flex items-start gap-4 p-4 rounded-lg bg-slate-50/50">
+              <div key={merchant.id} className="flex items-start gap-4 p-4 rounded-lg bg-gray40/50">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <p className="font-medium text-slate-900">{merchant.business_name}</p>
-                    <span className="text-sm text-slate-500">
+                    <p className="font-medium text-black50">{merchant.business_name}</p>
+                    <span className="text-sm text-gray100">
                       {format(new Date(merchant.created_date), 'MMM d, yyyy')}
                     </span>
                   </div>
-                  <p className="text-sm text-slate-600 mt-1">{merchant.risk_notes}</p>
+                  <p className="text-sm text-gray100 mt-1">{merchant.risk_notes}</p>
                   <div className="flex items-center gap-2 mt-2">
                     <Badge className={
                       merchant.risk_level === 'critical' ? 'bg-red-200 text-red-900' :
@@ -185,7 +185,7 @@ export default function RiskManagement() {
                     }>
                       {merchant.risk_level} risk
                     </Badge>
-                    <span className="text-sm text-slate-500">
+                    <span className="text-sm text-gray100">
                       ${merchant.monthly_volume?.toLocaleString()} monthly
                     </span>
                   </div>

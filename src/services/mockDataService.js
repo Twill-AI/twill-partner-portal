@@ -1,6 +1,46 @@
 // Mock Data Service
 // Provides consistent mock data with standardized output format
 
+// Mock Fee Schedules Data
+const mockFeeSchedules = [
+  {
+    id: "fee_001",
+    name: "Standard Processing",
+    is_default: true,
+    is_enabled: true,
+    schedule_data: {
+      monthly_fee: 99.00,
+      discount_rate: 2.5,
+      authorization_fee: 0.10,
+      ach_rate: 0.75
+    }
+  },
+  {
+    id: "fee_002",
+    name: "Premium Processing",
+    is_default: false,
+    is_enabled: true,
+    schedule_data: {
+      monthly_fee: 199.00,
+      discount_rate: 2.2,
+      authorization_fee: 0.08,
+      ach_rate: 0.50
+    }
+  },
+  {
+    id: "fee_003",
+    name: "High Risk Processing",
+    is_default: false,
+    is_enabled: true,
+    schedule_data: {
+      monthly_fee: 299.00,
+      discount_rate: 3.5,
+      authorization_fee: 0.15,
+      ach_rate: 1.25
+    }
+  }
+];
+
 // Mock Merchants Data
 const mockMerchants = [
   {
@@ -12,6 +52,7 @@ const mockMerchants = [
     risk_level: "low",
     monthly_volume: 2500000,
     monthly_commission: 62500,
+    logo_url: "https://logo.clearbit.com/techflow.com",
     created_date: "2023-01-15T08:00:00Z",
     contact_email: "admin@techflow.com",
     phone: "+1-555-0123",
@@ -26,7 +67,8 @@ const mockMerchants = [
     transaction_count: 2941,
     chargeback_rate: 0.12,
     approval_rate: 94.8,
-    notes: "High-performing tech merchant with excellent payment history"
+    notes: "High-performing tech merchant with excellent payment history",
+    fee_schedule_id: "fee_002" // Premium Processing
   },
   {
     merchant_id: "mer_002",
@@ -37,6 +79,7 @@ const mockMerchants = [
     risk_level: "medium",
     monthly_volume: 1800000,
     monthly_commission: 45000,
+    logo_url: "https://logo.clearbit.com/greenearth.com",
     created_date: "2023-03-22T10:30:00Z",
     contact_email: "finance@greenearth.com",
     phone: "+1-555-0456",
@@ -51,7 +94,8 @@ const mockMerchants = [
     transaction_count: 14400,
     chargeback_rate: 0.28,
     approval_rate: 92.1,
-    notes: "Sustainable retail business with growing transaction volume"
+    notes: "Sustainable retail business with growing transaction volume",
+    fee_schedule_id: "fee_001" // Standard Processing
   },
   {
     merchant_id: "mer_003",
@@ -62,6 +106,7 @@ const mockMerchants = [
     risk_level: "high",
     monthly_volume: 950000,
     monthly_commission: 23750,
+    logo_url: "https://logo.clearbit.com/digipro.com",
     created_date: "2024-01-10T14:15:00Z",
     contact_email: "ops@digipro.com",
     phone: "+1-555-0789",
@@ -77,7 +122,8 @@ const mockMerchants = [
     chargeback_rate: 1.45,
     approval_rate: 87.3,
     notes: "Please provide 3 months bank statements.",
-    status_message: "Please provide 3 months bank statements."
+    status_message: "Please provide 3 months bank statements.",
+    fee_schedule_id: "fee_003" // High Risk Processing
   }
 ];
 
@@ -364,6 +410,28 @@ export const mockDataService = {
     await delay(200);
     Object.assign(mockUser, updates);
     return { data: mockUser };
+  },
+
+  // Fee schedule operations
+  async getFeeSchedules(options = {}) {
+    await delay(100);
+    let schedules = [...mockFeeSchedules];
+    
+    // Apply filters if provided
+    if (options.enabled !== undefined) {
+      schedules = schedules.filter(s => s.is_enabled === options.enabled);
+    }
+    
+    return { data: schedules };
+  },
+
+  async getFeeSchedule(scheduleId) {
+    await delay(100);
+    const schedule = mockFeeSchedules.find(s => s.id === scheduleId);
+    if (!schedule) {
+      throw new Error(`Fee schedule ${scheduleId} not found`);
+    }
+    return { data: schedule };
   },
 
   // Connection status (always connected for mock)

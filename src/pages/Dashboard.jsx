@@ -83,23 +83,11 @@ export default function Dashboard() {
     .sort((a, b) => (b.monthly_volume || 0) - (a.monthly_volume || 0))
     .slice(0, 5) : [];
 
-  // Generate dynamic trends based on data
+  // Calculate real trends from historical data (no dummy data)
   const calculateTrend = (current, type) => {
-    if (current === 0) return "+0%";
-    
-    // Simple trend calculation based on data characteristics
-    switch (type) {
-      case 'volume':
-        return totalVolume > 5000000 ? "+12.5%" : totalVolume > 2000000 ? "+8.2%" : "+3.1%";
-      case 'commission':
-        return totalCommission > 100000 ? "+15.3%" : totalCommission > 50000 ? "+8.7%" : "+4.2%";
-      case 'merchants':
-        return activeMerchants > 2 ? "+2" : activeMerchants > 1 ? "+1" : "0";
-      case 'risk':
-        return riskMerchants > 1 ? "-1" : riskMerchants === 1 ? "0" : "-2";
-      default:
-        return "+0%";
-    }
+    // Only show trends if we have real historical data to compare
+    // For now, return null to indicate no trend data available
+    return null;
   };
 
   // Generate recent activity from real data
@@ -146,14 +134,7 @@ export default function Dashboard() {
       });
     }
     
-    // Fallback activities if no data
-    if (activities.length === 0) {
-      activities.push(
-        { icon: 'emerald', text: 'System monitoring active' },
-        { icon: 'blue', text: 'Dashboard updated' },
-        { icon: 'purple', text: 'Data sync completed' }
-      );
-    }
+    // No fallback activities - show empty state if no real data
     
     return activities.slice(0, 4); // Limit to 4 activities
   };
@@ -161,10 +142,20 @@ export default function Dashboard() {
   const recentActivities = generateRecentActivity();
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold text-black50">Partner Dashboard</h1>
-        <p className="text-gray100">Welcome back to your Twill partner portal</p>
+    <div className="pt-6 space-y-6 min-h-screen">
+      {(!merchants || merchants.length === 0 || !commissions || commissions.length === 0) && (
+        <div className="bg-yellow-100 text-yellow-900 p-4 rounded mb-4 text-center font-bold">
+          No merchants or commissions data loaded. Check data source and API/service status.
+        </div>
+      )}
+      <div className="flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-bold text-black50">Partner Dashboard</h1>
+          <p className="text-gray100 mt-1">Welcome back to your Twill partner portal</p>
+        </div>
+        <div className="text-sm text-gray100">
+          Data Source: <span className="font-medium text-black50">{getDataSourceLabel()}</span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -209,8 +200,8 @@ export default function Dashboard() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-white rounded-xl p-6 shadow-lg border-0">
-          <h3 className="font-semibold text-slate-900 mb-4">Business Type Performance</h3>
+        <div className="bg-card rounded-xl p-6 shadow-md shadow-[rgba(13,10,44,0.08)] border-0">
+          <h3 className="font-semibold text-black50 mb-4">Business Type Performance</h3>
           <div className="space-y-3">
             {[
               { key: 'Software', label: 'software' },
@@ -223,41 +214,41 @@ export default function Dashboard() {
                 .reduce((sum, m) => sum + (m.monthly_volume || 0), 0) : 0;
               return (
                 <div key={key} className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600 capitalize">{label}</span>
-                  <span className="font-medium text-slate-900">${typeVolume.toLocaleString()}</span>
+                  <span className="text-sm text-gray100 capitalize">{label}</span>
+                  <span className="font-medium text-black50">${typeVolume.toLocaleString()}</span>
                 </div>
               );
             })}
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg border-0">
-          <h3 className="font-semibold text-slate-900 mb-4">Pipeline Status</h3>
+        <div className="bg-card rounded-xl p-6 shadow-md shadow-[rgba(13,10,44,0.08)] border-0">
+          <h3 className="font-semibold text-black50 mb-4">Pipeline Status</h3>
           <div className="space-y-3">
             {['lead', 'application', 'underwriting', 'approved', 'active'].map((status) => {
               const count = Array.isArray(merchants) ? merchants.filter(m => m.status === status).length : 0;
               return (
                 <div key={status} className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600 capitalize">{status.replace('_', ' ')}</span>
-                  <span className="font-medium text-slate-900">{count}</span>
+                  <span className="text-sm text-gray100 capitalize">{status.replace('_', ' ')}</span>
+                  <span className="font-medium text-black50">{count}</span>
                 </div>
               );
             })}
           </div>
         </div>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg border-0">
-          <h3 className="font-semibold text-slate-900 mb-4">Recent Activity</h3>
+        <div className="bg-card rounded-xl p-6 shadow-md shadow-[rgba(13,10,44,0.08)] border-0">
+          <h3 className="font-semibold text-black50 mb-4">Recent Activity</h3>
           <div className="space-y-3">
             {recentActivities.map((activity, index) => (
               <div key={index} className="flex items-center gap-3">
                 <div className={`w-2 h-2 rounded-full ${
-                  activity.icon === 'emerald' ? 'bg-emerald-500' :
-                  activity.icon === 'blue' ? 'bg-blue-500' :
-                  activity.icon === 'amber' ? 'bg-amber-500' :
-                  'bg-purple-500'
+                  activity.icon === 'emerald' ? 'bg-green' :
+                  activity.icon === 'blue' ? 'bg-azure100' :
+                  activity.icon === 'amber' ? 'bg-yellow75' :
+                  'bg-periwinkle50'
                 }`}></div>
-                <span className="text-sm text-slate-600">{activity.text}</span>
+                <span className="text-sm text-gray100">{activity.text}</span>
               </div>
             ))}
           </div>

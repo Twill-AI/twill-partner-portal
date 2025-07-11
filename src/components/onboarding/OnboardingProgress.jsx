@@ -2,7 +2,7 @@
 import React from 'react';
 import { CheckCircle, Circle, Clock } from "lucide-react";
 
-export default function OnboardingProgress({ currentStep, completedSteps, onStepClick }) {
+export default function OnboardingProgress({ currentStep, completedSteps = [], onStepClick = () => {} }) {
   const steps = [
     { id: 1, title: 'Business Info', description: 'Basic business details' },
     { id: 2, title: 'Legal Details', description: 'Legal entity information' },

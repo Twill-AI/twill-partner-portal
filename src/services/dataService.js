@@ -61,6 +61,17 @@ export const dataService = {
     return await service.updateCurrentUser(updates);
   },
 
+  // Fee schedule operations
+  async getFeeSchedules(options = {}) {
+    const service = getDataService();
+    return service.getFeeSchedules ? await service.getFeeSchedules(options) : { data: [] };
+  },
+
+  async getFeeSchedule(scheduleId) {
+    const service = getDataService();
+    return service.getFeeSchedule ? await service.getFeeSchedule(scheduleId) : null;
+  },
+
   // Utility methods
   getCurrentDataSource,
   

@@ -23,38 +23,38 @@ module.exports = {
 			black50: "#222E48",
 			black100: "#161E2D",
 			azure100: "#387094",
-			yellow75: "#D1A400", 
+			yellow75: "#D1A400",
 			error: "#FF2753",
 			green: "#39E696",
 			periwinkle50: "#7994DD",
-			background: "#FFF",
-			foreground: "#222E48",
-			border: "#CCD0DA",
-			input: "#ECF1F4",
-			ring: "#222E48",
+			border: "hsl(var(--border))",
+			input: "hsl(var(--input))",
+			ring: "hsl(var(--ring))",
+			background: "hsl(var(--background))",
+			foreground: "hsl(var(--foreground))",
 			primary: {
-				DEFAULT: "#222E48",
-				foreground: "#FFF"
+				DEFAULT: "hsl(var(--primary))",
+				foreground: "hsl(var(--primary-foreground))",
 			},
 			secondary: {
-				DEFAULT: "#387094",
-				foreground: "#FFF"
+				DEFAULT: "hsl(var(--secondary))",
+				foreground: "hsl(var(--secondary-foreground))",
 			},
 			muted: {
-				DEFAULT: "#F3F6F8",
-				foreground: "#7B8294"
+				DEFAULT: "hsl(var(--muted))",
+				foreground: "hsl(var(--muted-foreground))",
 			},
 			accent: {
-				DEFAULT: "#7994DD",
-				foreground: "#FFF"
+				DEFAULT: "hsl(var(--accent))",
+				foreground: "hsl(var(--accent-foreground))",
 			},
 			destructive: {
-				DEFAULT: "#FF2753",
-				foreground: "#FFF"
+				DEFAULT: "hsl(var(--destructive))",
+				foreground: "hsl(var(--destructive-foreground))",
 			},
 			popover: {
-				DEFAULT: "#FFF",
-				foreground: "#222E48"
+				DEFAULT: "hsl(var(--popover))",
+				foreground: "hsl(var(--popover-foreground))",
 			},
 			chart: {
 				"1": "#387094",

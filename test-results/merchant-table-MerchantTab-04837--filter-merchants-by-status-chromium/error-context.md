@@ -1,0 +1,193 @@
+# Page snapshot
+
+```yaml
+- img
+- list:
+  - listitem:
+    - link "Dashboard":
+      - /url: /dashboard
+      - img
+      - text: Dashboard
+  - listitem:
+    - link "Merchants":
+      - /url: /merchants
+      - img
+      - text: Merchants
+  - listitem:
+    - link "Commission Reports":
+      - /url: /commissionreports
+      - img
+      - text: Commission Reports
+  - listitem:
+    - link "Insights & Alerts":
+      - /url: /insightsalerts
+      - img
+      - text: Insights & Alerts
+  - listitem:
+    - link "Pipeline":
+      - /url: /pipeline
+      - img
+      - text: Pipeline
+  - listitem:
+    - link "Risk Management":
+      - /url: /riskmanagement
+      - img
+      - text: Risk Management
+- button "Mock"
+- button "PayEngine"
+- text: P
+- paragraph: Partner User
+- paragraph: Sales Team
+- main:
+  - heading "Merchant Portfolio" [level=1]
+  - paragraph: Manage and monitor your merchant accounts
+  - button "Add Merchant":
+    - img
+    - text: Add Merchant
+  - button "All (3)"
+  - button "Active (2)"
+  - button "Pending"
+  - button "In Review (1)"
+  - button "Rejected"
+  - img
+  - textbox "Search merchants..."
+  - button:
+    - img
+  - button:
+    - img
+  - button:
+    - img
+  - table:
+    - rowgroup:
+      - row "Business Status Risk Type Volume Transactions Metrics":
+        - cell "Business"
+        - cell "Status":
+          - text: Status
+          - img
+        - cell "Risk":
+          - text: Risk
+          - img
+        - cell "Type":
+          - text: Type
+          - img
+        - cell "Volume":
+          - text: Volume
+          - img
+        - cell "Transactions":
+          - text: Transactions
+          - img
+        - cell "Metrics"
+        - cell
+    - rowgroup:
+      - row "D Digital Marketing Pro mer_003 in review high Services $0 0.0% 601 $1,580 avg Approval 8730.0% Chargeback 145.0%":
+        - cell "D Digital Marketing Pro mer_003":
+          - text: D
+          - paragraph: Digital Marketing Pro
+          - paragraph: mer_003
+        - cell "in review":
+          - img
+          - text: in review
+        - cell "high":
+          - img
+          - text: high
+        - cell "Services":
+          - paragraph: Services
+        - cell "$0 0.0%":
+          - paragraph: $0
+          - img
+          - text: 0.0%
+        - cell "601 $1,580 avg":
+          - paragraph: "601"
+          - paragraph: $1,580 avg
+        - cell "Approval 8730.0% Chargeback 145.0%":
+          - paragraph: Approval
+          - paragraph: 8730.0%
+          - paragraph: Chargeback
+          - paragraph: 145.0%
+        - cell:
+          - button:
+            - img
+          - button:
+            - img
+          - button:
+            - img
+      - row "G Green Earth Retail mer_002 active medium Retail $0 0.0% 14,400 $125 avg Approval 9210.0% Chargeback 28.0%":
+        - cell "G Green Earth Retail mer_002":
+          - text: G
+          - paragraph: Green Earth Retail
+          - paragraph: mer_002
+        - cell "active":
+          - img
+          - text: active
+        - cell "medium":
+          - img
+          - text: medium
+        - cell "Retail":
+          - paragraph: Retail
+        - cell "$0 0.0%":
+          - paragraph: $0
+          - img
+          - text: 0.0%
+        - cell "14,400 $125 avg":
+          - paragraph: 14,400
+          - paragraph: $125 avg
+        - cell "Approval 9210.0% Chargeback 28.0%":
+          - paragraph: Approval
+          - paragraph: 9210.0%
+          - paragraph: Chargeback
+          - paragraph: 28.0%
+        - cell:
+          - button:
+            - img
+          - button:
+            - img
+          - button:
+            - img
+      - row "T TechFlow Solutions mer_001 active low Software $0 0.0% 2,941 $850 avg Approval 9480.0% Chargeback 12.0%":
+        - cell "T TechFlow Solutions mer_001":
+          - text: T
+          - paragraph: TechFlow Solutions
+          - paragraph: mer_001
+        - cell "active":
+          - img
+          - text: active
+        - cell "low":
+          - img
+          - text: low
+        - cell "Software":
+          - paragraph: Software
+        - cell "$0 0.0%":
+          - paragraph: $0
+          - img
+          - text: 0.0%
+        - cell "2,941 $850 avg":
+          - paragraph: 2,941
+          - paragraph: $850 avg
+        - cell "Approval 9480.0% Chargeback 12.0%":
+          - paragraph: Approval
+          - paragraph: 9480.0%
+          - paragraph: Chargeback
+          - paragraph: 12.0%
+        - cell:
+          - button:
+            - img
+          - button:
+            - img
+          - button:
+            - img
+    - rowgroup:
+      - row "Showing 1 to 3 of 3 merchants Show 10 1":
+        - cell "Showing 1 to 3 of 3 merchants Show 10 1":
+          - paragraph: Showing 1 to 3 of 3 merchants
+          - text: Show
+          - combobox:
+            - option "10" [selected]
+            - option "25"
+            - option "50"
+            - option "100"
+          - button [disabled]:
+            - img
+          - button "1"
+          - button [disabled]:
+            - img
+```

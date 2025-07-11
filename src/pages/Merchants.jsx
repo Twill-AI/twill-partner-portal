@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { dataService } from '../services/dataService';
 import { useDataSource } from '../contexts/DataSourceContext';
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Plus } from "lucide-react";
 
 import MerchantTable from "../components/merchants/MerchantTable";
@@ -67,14 +68,14 @@ export default function Merchants() {
   };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="pt-6 space-y-6">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <h1 className="text-3xl font-bold text-black50">Merchant Portfolio</h1>
           <p className="text-gray100">Manage and monitor your merchant accounts</p>
         </div>
         <Button 
-          className="bg-azure100 hover:bg-periwinkle50 text-white"
+          className="bg-gradient-to-r from-azure100 to-periwinkle50 text-white hover:from-azure100/90 hover:to-periwinkle50/90"
           onClick={() => setShowOnboardingForm(true)}
         >
           <Plus className="w-4 h-4 mr-2" />
@@ -82,7 +83,7 @@ export default function Merchants() {
         </Button>
       </div>
 
-      <div className="bg-white rounded-xl shadow-md shadow-[rgba(13,10,44,0.08)] border-0">
+      <div className="bg-card rounded-xl shadow-md shadow-[rgba(13,10,44,0.08)] border-0">
         <MerchantTable 
           merchants={merchants}
           isLoading={isLoading}
@@ -91,12 +92,21 @@ export default function Merchants() {
         />
       </div>
 
-      {showOnboardingForm && (
-        <MerchantOnboardingForm
-          onClose={() => setShowOnboardingForm(false)}
-          onSave={handleSaveApplication}
-        />
-      )}
+      <Dialog open={showOnboardingForm} onOpenChange={setShowOnboardingForm}>
+        <DialogContent className="max-w-5xl max-h-[95vh] overflow-hidden p-0">
+          <DialogHeader className="px-6 py-4 border-b">
+            <DialogTitle className="text-xl font-semibold text-black50">
+              Add New Merchant
+            </DialogTitle>
+          </DialogHeader>
+          <div className="overflow-y-auto max-h-[calc(95vh-80px)]">
+            <MerchantOnboardingForm
+              onClose={() => setShowOnboardingForm(false)}
+              onSave={handleSaveApplication}
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

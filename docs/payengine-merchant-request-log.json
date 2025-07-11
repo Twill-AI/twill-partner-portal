@@ -1,0 +1,1157 @@
+[
+  {
+    "request": {
+      "label": "List All Fee Schedules",
+      "url": "https://console.payengine.dev/api/fee-schedules",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Basic [VITE_PAYENGINE_API_KEY from .env]",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-API-Version": "1.0",
+        "User-Agent": "Twill-Partner-Hub/1.0.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 200,
+      "statusText": "OK",
+      "body": {
+        "meta": {
+          "total": 5,
+          "current_page": 1,
+          "total_pages": 1
+        },
+        "data": [
+          {
+            "id": "affd1972-439b-4cb3-b585-f0fbb300a079",
+            "name": " Flat Rate 2.5%, 0.15 per auth, no ACH, $10 monthly fees",
+            "is_default": false,
+            "is_enabled": true,
+            "is_merchant_copy": false,
+            "is_contract_text_same_for_exhibit_A": true,
+            "auto_generate_contract_text": true,
+            "exhibit_A_text": "",
+            "data": null,
+            "schedule_data": {
+              "name": " Flat Rate 2.5%, 0.15 per auth, no ACH, $10 monthly fees",
+              "auto_generate_contract_text": true,
+              "is_contract_text_same_for_exhibit_A": true,
+              "exhibit_A_text": "",
+              "country": "UNITED STATES",
+              "billingCycle": "DAILY",
+              "pricingMethod": "TIERED_PRICING",
+              "pricingCategory": "RETAIL",
+              "cardCharges": [
+                {
+                  "cardType": "ALL_CARDS",
+                  "name": "",
+                  "authorizationFee": ".15",
+                  "defaultDiscountRate": "2.5",
+                  "defaultDiscountPerItemRate": 0,
+                  "pricingTiers": {
+                    "QUALIFIED": {
+                      "discountRate": "2.5",
+                      "discountPerItem": 0
+                    },
+                    "COMMERCIAL_NON_QUALIFIED": {
+                      "discountRate": "2.5",
+                      "discountPerItem": 0
+                    },
+                    "INTERNATIONAL": {
+                      "discountRate": "2.5",
+                      "discountPerItem": 0
+                    },
+                    "NON_QUALIFIED": {
+                      "discountRate": "2.5",
+                      "discountPerItem": 0
+                    },
+                    "PARTIAL_QUALIFIED": {
+                      "discountRate": "2.5",
+                      "discountPerItem": 0
+                    },
+                    "QUICKPAY": {
+                      "discountRate": "2.5",
+                      "discountPerItem": 0
+                    },
+                    "REWARDS": {
+                      "discountRate": "2.5",
+                      "discountPerItem": 0
+                    },
+                    "STANDARD": {
+                      "discountRate": "2.5",
+                      "discountPerItem": 0
+                    }
+                  }
+                }
+              ],
+              "debitPricing": {
+                "debitNetworkCharges": {
+                  "name": "",
+                  "type": "",
+                  "perAuth": "",
+                  "discountPerItem": "",
+                  "discountRate": ""
+                },
+                "authorizationMethod": "",
+                "pricingMethod": "",
+                "pinlessSetup": false
+              },
+              "fees": [
+                {
+                  "name": "",
+                  "type": "ACCT_MAINTENANCE",
+                  "quantity": "1",
+                  "frequency": "MONTHLY",
+                  "amount": "10",
+                  "startMonth": "JAN"
+                }
+              ],
+              "funding": {
+                "type": "STANDARD",
+                "feeAmount": "0"
+              },
+              "defaultAuthorizationFee": ".15"
+            },
+            "description": null,
+            "contract_text": "Pricing: Tiered Pricing | Billing - Daily | Funding - Standard\nCard Charges: All Cards - 2.50% + $0.15\nNo ACH\nFees: Acct Maintenance - $10.00/Monthly",
+            "created_at": "2025-06-11T21:30:46.008Z",
+            "updated_at": "2025-06-11T21:30:46.008Z",
+            "processors": []
+          },
+          {
+            "id": "3a5659ad-4bf7-4e96-84d1-e47c42903a09",
+            "name": " IC + 25 BP's, $0.15 per auth, no ACH, $15 monthly fees",
+            "is_default": false,
+            "is_enabled": true,
+            "is_merchant_copy": false,
+            "is_contract_text_same_for_exhibit_A": true,
+            "auto_generate_contract_text": true,
+            "exhibit_A_text": "",
+            "data": null,
+            "schedule_data": {
+              "name": " IC + 25 BP's, $0.15 per auth, no ACH, $15 monthly fees",
+              "auto_generate_contract_text": true,
+              "is_contract_text_same_for_exhibit_A": true,
+              "exhibit_A_text": "",
+              "country": "UNITED STATES",
+              "billingCycle": "MONTHLY",
+              "pricingMethod": "INTERCHANGE_PLUS",
+              "pricingCategory": "RETAIL",
+              "cardCharges": [
+                {
+                  "cardType": "ALL_CARDS",
+                  "name": "",
+                  "authorizationFee": ".15",
+                  "defaultDiscountRate": "0.25",
+                  "defaultDiscountPerItemRate": 0,
+                  "pricingTiers": {
+                    "QUALIFIED": {
+                      "discountRate": "0.25",
+                      "discountPerItem": 0
+                    },
+                    "COMMERCIAL_NON_QUALIFIED": {
+                      "discountRate": "0.25",
+                      "discountPerItem": 0
+                    },
+                    "INTERNATIONAL": {
+                      "discountRate": "0.25",
+                      "discountPerItem": 0
+                    },
+                    "NON_QUALIFIED": {
+                      "discountRate": "0.25",
+                      "discountPerItem": 0
+                    },
+                    "PARTIAL_QUALIFIED": {
+                      "discountRate": "0.25",
+                      "discountPerItem": 0
+                    },
+                    "QUICKPAY": {
+                      "discountRate": "0.25",
+                      "discountPerItem": 0
+                    },
+                    "REWARDS": {
+                      "discountRate": "0.25",
+                      "discountPerItem": 0
+                    },
+                    "STANDARD": {
+                      "discountRate": "0.25",
+                      "discountPerItem": 0
+                    }
+                  }
+                }
+              ],
+              "debitPricing": {
+                "debitNetworkCharges": {
+                  "name": "",
+                  "type": "",
+                  "perAuth": "",
+                  "discountPerItem": "",
+                  "discountRate": ""
+                },
+                "authorizationMethod": "",
+                "pricingMethod": "",
+                "pinlessSetup": false
+              },
+              "fees": [
+                {
+                  "name": "",
+                  "type": "ACCT_MAINTENANCE",
+                  "quantity": "1",
+                  "frequency": "MONTHLY",
+                  "amount": "15.00",
+                  "startMonth": "JAN"
+                }
+              ],
+              "achPricing": {
+                "maximumFee": ""
+              },
+              "funding": {
+                "type": "STANDARD",
+                "feeAmount": "0"
+              },
+              "defaultAuthorizationFee": ".15"
+            },
+            "description": null,
+            "contract_text": "Pricing: Interchange Plus | Billing - Monthly | Funding - Standard\nCard Charges: All Cards - 0.25% + $0.15\nNo ACH\nFees: Acct Maintenance - $15.00/Monthly",
+            "created_at": "2025-06-11T21:28:59.864Z",
+            "updated_at": "2025-06-11T21:28:59.864Z",
+            "processors": []
+          },
+          {
+            "id": "23b6f67a-755c-47f3-ad99-419a94f8ed11",
+            "name": " IC+50 BP's, $0.25 per auth, ACH 1% capped at $20, $20 combined monthly fee",
+            "is_default": false,
+            "is_enabled": true,
+            "is_merchant_copy": false,
+            "is_contract_text_same_for_exhibit_A": true,
+            "auto_generate_contract_text": true,
+            "exhibit_A_text": "",
+            "data": null,
+            "schedule_data": {
+              "name": " IC+50 BP's, $0.25 per auth, ACH 1% capped at $20, $20 combined monthly fee",
+              "auto_generate_contract_text": true,
+              "is_contract_text_same_for_exhibit_A": true,
+              "exhibit_A_text": "",
+              "country": "UNITED STATES",
+              "billingCycle": "MONTHLY",
+              "pricingMethod": "INTERCHANGE_PLUS",
+              "pricingCategory": "RETAIL",
+              "cardCharges": [
+                {
+                  "cardType": "ALL_CARDS",
+                  "name": "",
+                  "authorizationFee": ".25",
+                  "defaultDiscountRate": "0.50",
+                  "defaultDiscountPerItemRate": 0,
+                  "pricingTiers": {
+                    "QUALIFIED": {
+                      "discountRate": "0.50",
+                      "discountPerItem": 0
+                    },
+                    "COMMERCIAL_NON_QUALIFIED": {
+                      "discountRate": "0.50",
+                      "discountPerItem": 0
+                    },
+                    "INTERNATIONAL": {
+                      "discountRate": "0.50",
+                      "discountPerItem": 0
+                    },
+                    "NON_QUALIFIED": {
+                      "discountRate": "0.50",
+                      "discountPerItem": 0
+                    },
+                    "PARTIAL_QUALIFIED": {
+                      "discountRate": "0.50",
+                      "discountPerItem": 0
+                    },
+                    "QUICKPAY": {
+                      "discountRate": "0.50",
+                      "discountPerItem": 0
+                    },
+                    "REWARDS": {
+                      "discountRate": "0.50",
+                      "discountPerItem": 0
+                    },
+                    "STANDARD": {
+                      "discountRate": "0.50",
+                      "discountPerItem": 0
+                    }
+                  }
+                }
+              ],
+              "debitPricing": {
+                "debitNetworkCharges": {
+                  "name": "",
+                  "type": "",
+                  "perAuth": "",
+                  "discountPerItem": "",
+                  "discountRate": ""
+                },
+                "authorizationMethod": "",
+                "pricingMethod": "",
+                "pinlessSetup": false
+              },
+              "fees": [
+                {
+                  "name": "",
+                  "type": "STATEMENT",
+                  "quantity": "1",
+                  "frequency": "MONTHLY",
+                  "amount": "20",
+                  "startMonth": "JAN"
+                }
+              ],
+              "achPricing": {
+                "transactionRate": "1",
+                "maximumFee": "20"
+              },
+              "funding": {
+                "type": "STANDARD",
+                "feeAmount": "0"
+              },
+              "defaultAuthorizationFee": ".25"
+            },
+            "description": null,
+            "contract_text": "Pricing: Interchange Plus | Billing - Monthly | Funding - Standard\nCard Charges: All Cards - 0.50% + $0.25\nACH: 1.00% + $NaN; Max - $20.00\nFees: Statement - $20.00/Monthly",
+            "created_at": "2025-06-11T21:27:46.815Z",
+            "updated_at": "2025-06-11T21:27:46.815Z",
+            "processors": []
+          },
+          {
+            "id": "46a7204f-79da-4507-bc29-8b72f25c7b4b",
+            "name": "Flat Rate 3.5%, $0.25 per auth, ACH 1% capped at $20, $10 Statement Fee, $10 account maintenence",
+            "is_default": false,
+            "is_enabled": true,
+            "is_merchant_copy": false,
+            "is_contract_text_same_for_exhibit_A": true,
+            "auto_generate_contract_text": true,
+            "exhibit_A_text": "",
+            "data": null,
+            "schedule_data": {
+              "name": "Flat Rate 3.5%, $0.25 per auth, ACH 1% capped at $20, $10 Statement Fee, $10 account maintenence",
+              "auto_generate_contract_text": true,
+              "is_contract_text_same_for_exhibit_A": true,
+              "exhibit_A_text": "",
+              "country": "UNITED STATES",
+              "billingCycle": "MONTHLY",
+              "pricingMethod": "TIERED_PRICING",
+              "pricingCategory": "RETAIL",
+              "cardCharges": [
+                {
+                  "cardType": "ALL_CARDS",
+                  "name": "",
+                  "authorizationFee": ".25",
+                  "defaultDiscountRate": "3.50",
+                  "defaultDiscountPerItemRate": 0,
+                  "pricingTiers": {
+                    "QUALIFIED": {
+                      "discountRate": "3.50",
+                      "discountPerItem": 0
+                    },
+                    "COMMERCIAL_NON_QUALIFIED": {
+                      "discountRate": "3.50",
+                      "discountPerItem": 0
+                    },
+                    "INTERNATIONAL": {
+                      "discountRate": "3.50",
+                      "discountPerItem": 0
+                    },
+                    "NON_QUALIFIED": {
+                      "discountRate": "3.50",
+                      "discountPerItem": 0
+                    },
+                    "PARTIAL_QUALIFIED": {
+                      "discountRate": "3.50",
+                      "discountPerItem": 0
+                    },
+                    "QUICKPAY": {
+                      "discountRate": "3.50",
+                      "discountPerItem": 0
+                    },
+                    "REWARDS": {
+                      "discountRate": "3.50",
+                      "discountPerItem": 0
+                    },
+                    "STANDARD": {
+                      "discountRate": "3.50",
+                      "discountPerItem": 0
+                    }
+                  }
+                }
+              ],
+              "debitPricing": {
+                "debitNetworkCharges": {
+                  "name": "",
+                  "type": "",
+                  "perAuth": "",
+                  "discountPerItem": "",
+                  "discountRate": ""
+                },
+                "authorizationMethod": "",
+                "pricingMethod": "",
+                "pinlessSetup": false
+              },
+              "fees": [
+                {
+                  "name": "",
+                  "type": "STATEMENT",
+                  "quantity": "1",
+                  "frequency": "MONTHLY",
+                  "amount": "10",
+                  "startMonth": "JAN"
+                },
+                {
+                  "name": "",
+                  "type": "ACCT_MAINTENANCE",
+                  "quantity": "1",
+                  "frequency": "MONTHLY",
+                  "amount": "10",
+                  "startMonth": "JAN"
+                }
+              ],
+              "achPricing": {
+                "transactionRate": "1",
+                "maximumFee": "20"
+              },
+              "funding": {
+                "type": "STANDARD",
+                "feeAmount": "0"
+              },
+              "defaultAuthorizationFee": ".25"
+            },
+            "description": null,
+            "contract_text": "Pricing: Tiered Pricing | Billing - Monthly | Funding - Standard\nCard Charges: All Cards - 3.50% + $0.25\nACH: 1.00% + $NaN; Max - $20.00\nFees: Statement - $10.00/Monthly | Acct Maintenance - $10.00/Monthly",
+            "created_at": "2025-06-11T21:26:30.142Z",
+            "updated_at": "2025-06-11T21:26:30.142Z",
+            "processors": []
+          },
+          {
+            "id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "name": "Standard Plan: All Cards 2.9% + $.30; No ACH; Monthly Fees $20; PCI Monthly Fee: $6.25",
+            "is_default": true,
+            "is_enabled": true,
+            "is_merchant_copy": false,
+            "is_contract_text_same_for_exhibit_A": true,
+            "auto_generate_contract_text": true,
+            "exhibit_A_text": null,
+            "data": {},
+            "schedule_data": {
+              "name": "Standard Plan: All Cards 2.9% + $.30; No ACH; Monthly Fees $20; PCI Monthly Fee: $6.25",
+              "country": "UNITED STATES",
+              "billingCycle": "DAILY",
+              "pricingMethod": "TIERED_PRICING",
+              "pricingCategory": "RETAIL",
+              "cardCharges": [
+                {
+                  "cardType": "ALL_CARDS",
+                  "name": "",
+                  "authorizationFee": "0.30",
+                  "defaultDiscountRate": "2.9",
+                  "defaultDiscountPerItemRate": 0,
+                  "pricingTiers": {
+                    "QUALIFIED": {
+                      "discountRate": "2.9",
+                      "discountPerItem": 0
+                    },
+                    "COMMERCIAL_NON_QUALIFIED": {
+                      "discountRate": "2.9",
+                      "discountPerItem": 0
+                    },
+                    "INTERNATIONAL": {
+                      "discountRate": "2.9",
+                      "discountPerItem": 0
+                    },
+                    "NON_QUALIFIED": {
+                      "discountRate": "2.9",
+                      "discountPerItem": 0
+                    },
+                    "PARTIAL_QUALIFIED": {
+                      "discountRate": "2.9",
+                      "discountPerItem": 0
+                    },
+                    "QUICKPAY": {
+                      "discountRate": "2.9",
+                      "discountPerItem": 0
+                    },
+                    "REWARDS": {
+                      "discountRate": "2.9",
+                      "discountPerItem": 0
+                    },
+                    "STANDARD": {
+                      "discountRate": "2.9",
+                      "discountPerItem": 0
+                    }
+                  }
+                }
+              ],
+              "debitPricing": {
+                "debitNetworkCharges": {
+                  "name": "",
+                  "type": "",
+                  "perAuth": "",
+                  "discountPerItem": "",
+                  "discountRate": ""
+                },
+                "authorizationMethod": "",
+                "pricingMethod": "",
+                "pinlessSetup": true
+              },
+              "fees": [],
+              "funding": {
+                "type": "STANDARD",
+                "feeAmount": "0"
+              },
+              "defaultAuthorizationFee": "0.30"
+            },
+            "description": "CC interchange + 0.3% + $.20; ACH $0.20; MONTHLY $20; PCI $79; NO REV Share",
+            "contract_text": "Pricing: Tiered Pricing | Billing - Daily | Funding - Standard\nCard Charges: All Cards - 2.90% + $0.30\nNo ACH",
+            "created_at": "2024-10-22T17:36:13.005Z",
+            "updated_at": "2024-10-22T17:36:13.005Z",
+            "processors": []
+          }
+        ]
+      }
+    },
+    "error": null
+  },
+  {
+    "request": {
+      "label": "List All Merchants",
+      "url": "https://console.payengine.dev/api/merchant",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Basic [VITE_PAYENGINE_API_KEY from .env]",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-API-Version": "1.0",
+        "User-Agent": "Twill-Partner-Hub/1.0.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 200,
+      "statusText": "OK",
+      "body": {
+        "data": [
+          {
+            "id": "033e79eb-d07e-48e4-838e-bc925e8027a2",
+            "name": "Test Merchant",
+            "external_id": "test_external_id",
+            "email": "testmerchant@example.com",
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-11T04:27:07.269Z",
+            "updated_at": "2025-07-11T04:27:07.775Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+            "name": "Fan Szechuan Cuisine Inc",
+            "external_id": "001",
+            "email": "Loharriette@gmail.com",
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": "accepted",
+            "created_at": "2025-07-09T19:46:11.484Z",
+            "updated_at": "2025-07-10T00:05:31.029Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": "not_applicable",
+            "percentage_completed": "100",
+            "total_steps": "7",
+            "steps_completed": "7",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "434bcb09-8713-4307-9683-b3dde58618d0",
+            "name": "mikesandboxtest7",
+            "external_id": "001",
+            "email": "mike+sandbox7@twillpayments.com",
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": "invited",
+            "created_at": "2025-07-09T19:13:07.986Z",
+            "updated_at": "2025-07-09T19:13:08.458Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "0050a7e5-6587-46db-ac3b-6f0772409a3d",
+            "name": "Acme Widgets",
+            "external_id": null,
+            "email": "mike@twillpayments.com",
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": "invited",
+            "created_at": "2025-07-08T19:21:56.297Z",
+            "updated_at": "2025-07-08T19:21:56.437Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "a915eb65-a098-4782-95a9-9270e042b8ec",
+            "name": "Twill Payments 2",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T16:51:44.517Z",
+            "updated_at": "2025-07-03T16:51:44.624Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "c852bcc7-9a74-441c-a18a-d26fce33c497",
+            "name": "Twill Payments 2",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T16:45:05.044Z",
+            "updated_at": "2025-07-03T16:45:05.434Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "c6befa40-df03-4f34-bcbd-c8eacd34f8cb",
+            "name": "Twill Payments 2",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T16:44:37.715Z",
+            "updated_at": "2025-07-03T16:44:37.949Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "cb30e57d-e6d9-418a-9508-6a27e2a966d3",
+            "name": "Twill Payments 2",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T16:44:37.712Z",
+            "updated_at": "2025-07-03T16:44:37.962Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "4536ec12-a842-430a-91fe-08f28efb67d9",
+            "name": "Twill Payments 2",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:50:34.708Z",
+            "updated_at": "2025-07-03T14:50:34.919Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+            "name": "Thiel - Bartoletti",
+            "external_id": null,
+            "email": "Sven_Abernathy52@gmail.com",
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:43:23.794Z",
+            "updated_at": "2025-07-09T19:51:18.798Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "active",
+            "group_name": null,
+            "can_process": true,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "78",
+            "total_steps": "9",
+            "steps_completed": "7",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "fd19e8d0-2434-4762-90dc-f33d135b486b",
+            "name": "Twill Payments 1",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:42:24.580Z",
+            "updated_at": "2025-07-03T14:42:24.767Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "10a6ffbf-26e5-47f0-a877-0b8e171e34de",
+            "name": "Twill Payments 1",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:42:21.343Z",
+            "updated_at": "2025-07-03T14:42:22.033Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "e58bb299-4740-4575-8ea0-5e731aa83fce",
+            "name": "Twill Payments 1",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:42:14.014Z",
+            "updated_at": "2025-07-03T14:42:14.247Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "f6632d1f-f2f7-4d40-ac2e-865040011509",
+            "name": "Twill Payments 1",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:34:38.469Z",
+            "updated_at": "2025-07-03T14:34:38.577Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "7b6aeec0-ec4f-48d0-a4c5-f9f39a05198e",
+            "name": "Twill Payments 1",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:34:38.410Z",
+            "updated_at": "2025-07-03T14:34:38.727Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "a89ceea8-07ac-4214-b804-7bc952a914c0",
+            "name": "Twill Payments 1",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:29:12.042Z",
+            "updated_at": "2025-07-03T14:29:12.209Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "2f0a3fbf-fb2b-4bf9-ab8b-b89b1a99e856",
+            "name": "Twill Payments 1",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:29:08.839Z",
+            "updated_at": "2025-07-03T14:29:09.320Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "9b15c9a1-d8a5-4294-8daf-aeff98dd0771",
+            "name": "Twill Payments 1",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T14:29:08.836Z",
+            "updated_at": "2025-07-03T14:29:09.321Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "d3224494-938c-4805-94e9-b58f24fc6c23",
+            "name": "test_create_integration__payengine_no_proxy_no_public_token",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-03T07:13:15.164Z",
+            "updated_at": "2025-07-03T07:13:15.343Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          },
+          {
+            "id": "dea9281e-4a69-461d-ba92-fd1d5645f88e",
+            "name": "Twill Payments",
+            "external_id": null,
+            "email": null,
+            "processing_status": null,
+            "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+            "gateway_feeschedule_id": null,
+            "merchant_portal_invite": null,
+            "created_at": "2025-07-02T13:56:37.874Z",
+            "updated_at": "2025-07-02T13:56:38.189Z",
+            "parent_merchant_id": null,
+            "group_id": null,
+            "status": "editing",
+            "group_name": null,
+            "can_process": false,
+            "mid": null,
+            "bank_account_verification": null,
+            "percentage_completed": "0",
+            "total_steps": "7",
+            "steps_completed": "0",
+            "total_payment_volume": "0.00"
+          }
+        ],
+        "meta": {
+          "total": 165,
+          "current_page": 1,
+          "total_pages": 9
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "request": {
+      "label": "Fetch Transactions for Merchant",
+      "url": "https://console.payengine.dev/api/merchant/bb297cfb-6a2e-4655-b3c1-f93f6cda58c2/transaction",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Basic [VITE_PAYENGINE_API_KEY from .env]",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-API-Version": "1.0",
+        "User-Agent": "Twill-Partner-Hub/1.0.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 200,
+      "statusText": "OK",
+      "body": {
+        "data": [
+          {
+            "batch_id": null,
+            "merchant_id": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+            "id": "09e170b2-100a-4029-a07c-d47f0ea9a1df",
+            "transactionId": "b3668c20-f724-4268-9b72-afcde074a667",
+            "dispute_status": "AWAITING_CHARGEBACK_DETAILS",
+            "is_offline": false,
+            "currency": "USD",
+            "requested_currency": "USD",
+            "amount": "500.00",
+            "requested_amount": "500.00",
+            "currency_conversion_rate": null,
+            "fee_amount": null,
+            "net_amount": "500.00",
+            "data": {
+              "last_4": "4242",
+              "card_type": "visa",
+              "card_id": "e74fc604-4941-455b-9820-46c57c5fe89e",
+              "first_name": "Raymond",
+              "last_name": "E.",
+              "accounting_data": {},
+              "ip_address": "135.234.184.121",
+              "initiated_by": "customer",
+              "store_payment_method": true,
+              "auto_l2_order_number": false,
+              "auto_l2_sales_tax": false,
+              "auto_l2_customer_code": false
+            },
+            "card_type": "visa",
+            "last_4": "4242",
+            "host_report": {
+              "status": "PASS",
+              "responseCode": "A0000",
+              "responseMessage": "Success",
+              "authCode": "109320",
+              "hostResponseCode": "00",
+              "hostReferenceNumber": "146986312953",
+              "taskID": "44041979",
+              "transactionID": "29113961",
+              "transactionTimestamp": "2025-07-10T03:55:44",
+              "transactionAmount": "500.00",
+              "processedAmount": "500.00",
+              "totalAmount": "500.00",
+              "addressVerificationCode": "X",
+              "cardHolderVerificationCode": "M",
+              "cardType": "visa",
+              "maskedCardNumber": "4242",
+              "customerReceipt": "          Thiel Bartoletti          \\n        200 Epcot Center Dr         \\n         Orlando, FL 32836          \\n            800-490-8514            \\n                 \\n                 \\n        2025-07-10 03:55 AM         \\n           CREDIT - SALE            \\n         Entry Mode : KEYED         \\n      Transaction ID: 29113961      \\n       SUBTOTAL: USD $500.00        \\n         TOTAL: USD $500.00         \\n                 \\n                 \\n       NO SIGNATURE REQUIRED        \\n              APPROVED              \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n           Customer Copy            \\n",
+              "merchantReceipt": "          Thiel Bartoletti          \\n        200 Epcot Center Dr         \\n         Orlando, FL 32836          \\n            800-490-8514            \\n                 \\n                 \\n        2025-07-10 03:55 AM         \\n           CREDIT - SALE            \\n         Entry Mode : KEYED         \\n      Transaction ID: 29113961      \\n       SUBTOTAL: USD $500.00        \\n         TOTAL: USD $500.00         \\n                 \\n                 \\n      X_______________________      \\nI AGREE TO PAY ABOVE TOTAL AMOUNT IN\\n ACCORDANCE WITH CARD ISSUER's AGREE\\nMENT (MERCHANT AGREEMENT IF CREDIT V\\n              OUCHER)               \\n     KEEP COPY FOR YOUR RECORDS     \\n               \\n \\n                \\n              APPROVED              \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n                 \\n           Merchant Copy            \\n",
+              "partialPayment": false,
+              "providedSalesTax": false
+            },
+            "kount_score": null,
+            "payment_method": "Credit Card",
+            "type": "payment",
+            "fee_type": null,
+            "presettlement_fee": null,
+            "status": "succeeded",
+            "description": null,
+            "updated_at": "2025-07-10T03:55:44.483Z",
+            "created_at": "2025-07-10T03:55:44.483Z",
+            "external_id": "29113961",
+            "metadata": null,
+            "internalTransactionID": "2ed04d2e-6bad-4b18-9fcc-707f2ecca311",
+            "customer_name": "Raymond E.",
+            "customer_main_name": null,
+            "refund_type": null,
+            "dispute_data": null,
+            "gateway": "sandbox",
+            "gateway_id": null,
+            "used_threeds": false,
+            "settled": false
+          }
+        ],
+        "meta": {
+          "total": 1,
+          "current_page": 1,
+          "total_pages": 1
+        }
+      }
+    },
+    "error": null
+  },
+  {
+    "request": {
+      "label": "Fetch Balance History for Merchant",
+      "url": "https://console.payengine.dev/api/payouts/bb297cfb-6a2e-4655-b3c1-f93f6cda58c2/USD/balancehistory",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Basic [VITE_PAYENGINE_API_KEY from .env]",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-API-Version": "1.0",
+        "User-Agent": "Twill-Partner-Hub/1.0.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 400,
+      "statusText": "Bad Request",
+      "body": {
+        "error": true,
+        "message": "Unsupported API call. Please see API specifications at https://docs-api.payengine.co/"
+      }
+    },
+    "error": null
+  },
+  {
+    "request": {
+      "label": "Fetch Payout Info for Merchant",
+      "url": "https://console.payengine.dev/api/payouts/bb297cfb-6a2e-4655-b3c1-f93f6cda58c2/USD",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Basic [VITE_PAYENGINE_API_KEY from .env]",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-API-Version": "1.0",
+        "User-Agent": "Twill-Partner-Hub/1.0.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 400,
+      "statusText": "Bad Request",
+      "body": {
+        "error": true,
+        "message": "Unsupported API call. Please see API specifications at https://docs-api.payengine.co/"
+      }
+    },
+    "error": null
+  }
+]
