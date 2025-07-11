@@ -29,6 +29,7 @@ export default function PricingStep({ data, onChange }) {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResult, setAnalysisResult] = useState(null);
   const [yourOffer, setYourOffer] = useState({ rate: '', monthly_fees: '' }); // New state for Your Offer
+  const [requestConsult, setRequestConsult] = useState(data.request_consult || false);
 
   const feeSchedules = [
     { id: '1', name: 'Standard Retail', rate: '2.9% + $0.30', description: 'Best for retail businesses' },
@@ -134,6 +135,14 @@ export default function PricingStep({ data, onChange }) {
     onChange({
       ...data,
       pricing_model: model
+    });
+  };
+
+  const handleRequestConsultChange = (checked) => {
+    setRequestConsult(checked);
+    onChange({
+      ...data,
+      request_consult: checked
     });
   };
 
@@ -720,30 +729,47 @@ export default function PricingStep({ data, onChange }) {
           <p className="text-slate-600">Select terminals, POS systems, and payment gateways</p>
         </CardHeader>
         <CardContent className="p-6">
-          <div className="mb-6 p-4 rounded-lg bg-slate-50 border">
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-slate-600">Equipment Cost:</span>
-                <span className="text-slate-700 font-medium">
-                  ${totalEquipmentCostRaw.toLocaleString()}
-                </span>
+          {/* Request a Consult Toggle */}
+          <div className="mb-6 p-4 rounded-lg bg-blue-50 border border-blue-200">
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <h4 className="font-medium text-slate-900 mb-1">Request a Consult</h4>
+                <p className="text-sm text-slate-600">Skip equipment selection and request a consultation to discuss your needs</p>
               </div>
-              {isFreeTerminalOfferActive && discount > 0 && (
-                <div className="flex items-center justify-between text-emerald-600">
-                  <span className="text-sm font-medium">Free Terminal Discount:</span>
-                  <span className="font-medium">
-                    -${discount.toLocaleString()}
-                  </span>
-                </div>
-              )}
-              <div className="flex items-center justify-between border-t pt-2 mt-2">
-                <span className="text-lg font-semibold text-slate-900">Total:</span>
-                <Badge className="bg-emerald-100 text-emerald-800 text-lg px-3 py-1">
-                  ${totalEquipmentCost.toLocaleString()}
-                </Badge>
-              </div>
+              <Switch
+                checked={requestConsult}
+                onCheckedChange={handleRequestConsultChange}
+                className="ml-4"
+              />
             </div>
           </div>
+
+          {!requestConsult && (
+            <>
+              <div className="mb-6 p-4 rounded-lg bg-slate-50 border">
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-slate-600">Equipment Cost:</span>
+                      <span className="text-slate-700 font-medium">
+                        ${totalEquipmentCostRaw.toLocaleString()}
+                      </span>
+                    </div>
+                    {isFreeTerminalOfferActive && discount > 0 && (
+                      <div className="flex items-center justify-between text-emerald-600">
+                        <span className="text-sm font-medium">Free Terminal Discount:</span>
+                        <span className="font-medium">
+                          -${discount.toLocaleString()}
+                        </span>
+                      </div>
+                    )}
+                    <div className="flex items-center justify-between border-t pt-2 mt-2">
+                      <span className="text-lg font-semibold text-slate-900">Total:</span>
+                      <Badge className="bg-emerald-100 text-emerald-800 text-lg px-3 py-1">
+                        ${totalEquipmentCost.toLocaleString()}
+                      </Badge>
+                    </div>
+                  </div>
+                </div>
 
           <div className="space-y-6">
             {/* Terminals */}
@@ -857,6 +883,8 @@ export default function PricingStep({ data, onChange }) {
               </div>
             </div>
           </div>
+            </>
+          )}
         </CardContent>
       </Card>
 
