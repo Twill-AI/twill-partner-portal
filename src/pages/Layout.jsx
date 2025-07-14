@@ -84,7 +84,7 @@ export default function Layout({ children, currentPageName }) {
                 <SidebarMenu className="space-y-1">
                   {navigationItems.map((item) => {
                     // Disable Pipeline, Risk Management, and Insights & Alerts in PayEngine mode
-                    const isDisabled = isPayEngineMode && (item.title === 'Pipeline' || item.title === 'Risk Management' || item.title === 'Insights & Alerts');
+                    const isDisabled = isPayEngineMode && (item.title === 'Pipeline' || item.title === 'Risk Management' || item.title === 'Commission Reports' || item.title === 'Insights & Alerts');
                     
                     return (
                       <SidebarMenuItem key={item.title}>

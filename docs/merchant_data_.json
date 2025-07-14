@@ -1,0 +1,1898 @@
+{
+  "extraction_time": "2025-07-13T17:27:07.519801",
+  "status": "success",
+  "message": "Successfully extracted data for 18 merchants",
+  "total_merchants": 18,
+  "merchants": [
+    {
+      "merchant_id": "1e226219-c690-4f67-8864-2a50d89e5d6d",
+      "merchant_data": {
+        "id": "1e226219-c690-4f67-8864-2a50d89e5d6d",
+        "name": "test 12345",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-09T18:55:34.090Z",
+        "updated_at": "2025-07-09T18:55:34.168Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "1e226219-c690-4f67-8864-2a50d89e5d6d",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "1e226219-c690-4f67-8864-2a50d89e5d6d",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "1e226219-c690-4f67-8864-2a50d89e5d6d",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "3ccdbca5-a4ca-4e76-b3b8-8f04ba898f14",
+      "merchant_data": {
+        "id": "3ccdbca5-a4ca-4e76-b3b8-8f04ba898f14",
+        "name": "GEARSHIFT AUTO PARTS LLC",
+        "external_id": "500000994984",
+        "email": "info@gearshiftauto.parts",
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "accepted",
+        "created_at": "2025-06-30T20:51:22.231Z",
+        "updated_at": "2025-06-30T20:51:22.405Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "active",
+        "group_name": null,
+        "can_process": true,
+        "mid": "500000994984",
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "3ccdbca5-a4ca-4e76-b3b8-8f04ba898f14",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "3ccdbca5-a4ca-4e76-b3b8-8f04ba898f14",
+        "data": [
+          {
+            "id": "d5f32a25-1aa5-4375-bf67-045521b21d03",
+            "gatewayId": "sierra",
+            "gateway": "sierra",
+            "nickname": "tsys",
+            "capabilities": {
+              "taptopay": true,
+              "cc_payments": true
+            },
+            "enabled": true
+          }
+        ]
+      },
+      "transactions": {
+        "merchant_id": "3ccdbca5-a4ca-4e76-b3b8-8f04ba898f14",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "ba3161a6-4e37-466d-9696-a646333f9733",
+      "merchant_data": {
+        "id": "ba3161a6-4e37-466d-9696-a646333f9733",
+        "name": "Twill Payments",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-06-30T17:56:27.466Z",
+        "updated_at": "2025-06-30T17:56:27.630Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "ba3161a6-4e37-466d-9696-a646333f9733",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "ba3161a6-4e37-466d-9696-a646333f9733",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "ba3161a6-4e37-466d-9696-a646333f9733",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "f7f7fd8c-ae08-433f-abf5-4f2604e4127f",
+      "merchant_data": {
+        "id": "f7f7fd8c-ae08-433f-abf5-4f2604e4127f",
+        "name": "Twill Payments",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-06-30T12:58:38.327Z",
+        "updated_at": "2025-06-30T12:58:38.411Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "f7f7fd8c-ae08-433f-abf5-4f2604e4127f",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "f7f7fd8c-ae08-433f-abf5-4f2604e4127f",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "f7f7fd8c-ae08-433f-abf5-4f2604e4127f",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "e8571e26-5860-47a3-bc0d-6e4b18501f99",
+      "merchant_data": {
+        "id": "e8571e26-5860-47a3-bc0d-6e4b18501f99",
+        "name": "Twill Payments",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-06-26T04:12:11.949Z",
+        "updated_at": "2025-07-12T17:51:38.224Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "15",
+        "total_steps": "7",
+        "steps_completed": "1",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "e8571e26-5860-47a3-bc0d-6e4b18501f99",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "e8571e26-5860-47a3-bc0d-6e4b18501f99",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "e8571e26-5860-47a3-bc0d-6e4b18501f99",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "27d8242e-f9de-4449-8d81-8136185c5f3c",
+      "merchant_data": {
+        "id": "27d8242e-f9de-4449-8d81-8136185c5f3c",
+        "name": "Twill Payments",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-06-25T19:51:53.441Z",
+        "updated_at": "2025-06-25T19:51:53.540Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "27d8242e-f9de-4449-8d81-8136185c5f3c",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "27d8242e-f9de-4449-8d81-8136185c5f3c",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "27d8242e-f9de-4449-8d81-8136185c5f3c",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "f401aa57-8c84-4050-9e44-14fdd7feb72b",
+      "merchant_data": {
+        "id": "f401aa57-8c84-4050-9e44-14fdd7feb72b",
+        "name": "Twill Payments",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-06-25T10:42:45.816Z",
+        "updated_at": "2025-06-25T10:42:46.073Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "f401aa57-8c84-4050-9e44-14fdd7feb72b",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "f401aa57-8c84-4050-9e44-14fdd7feb72b",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "f401aa57-8c84-4050-9e44-14fdd7feb72b",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "77ffcfb3-a36a-499c-a9de-59917b1d9c5d",
+      "merchant_data": {
+        "id": "77ffcfb3-a36a-499c-a9de-59917b1d9c5d",
+        "name": "Test 5",
+        "external_id": "001",
+        "email": "mike+PEtestapp5@twillpayments.com",
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "accepted",
+        "created_at": "2025-06-10T17:10:08.201Z",
+        "updated_at": "2025-06-11T21:30:00.041Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "25",
+        "total_steps": "8",
+        "steps_completed": "2",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "77ffcfb3-a36a-499c-a9de-59917b1d9c5d",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "77ffcfb3-a36a-499c-a9de-59917b1d9c5d",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "77ffcfb3-a36a-499c-a9de-59917b1d9c5d",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "97aa1ddb-7879-4015-b705-6b775c5121ef",
+      "merchant_data": {
+        "id": "97aa1ddb-7879-4015-b705-6b775c5121ef",
+        "name": "Nader",
+        "external_id": "001",
+        "email": "naderatrchin@gmail.com",
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "invited",
+        "created_at": "2025-06-10T17:10:07.230Z",
+        "updated_at": "2025-06-10T17:10:07.394Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "97aa1ddb-7879-4015-b705-6b775c5121ef",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "97aa1ddb-7879-4015-b705-6b775c5121ef",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "97aa1ddb-7879-4015-b705-6b775c5121ef",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "e56e757e-1b68-410f-a405-5ff1632cddb7",
+      "merchant_data": {
+        "id": "e56e757e-1b68-410f-a405-5ff1632cddb7",
+        "name": "test 4",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-06-10T17:09:38.904Z",
+        "updated_at": "2025-06-10T17:09:39.073Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "e56e757e-1b68-410f-a405-5ff1632cddb7",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "e56e757e-1b68-410f-a405-5ff1632cddb7",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "e56e757e-1b68-410f-a405-5ff1632cddb7",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "eb21ea26-5f8a-4693-b3e0-7b137b198d80",
+      "merchant_data": {
+        "id": "eb21ea26-5f8a-4693-b3e0-7b137b198d80",
+        "name": "test legal 3",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-06-10T07:17:21.846Z",
+        "updated_at": "2025-06-10T07:18:00.315Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "13",
+        "total_steps": "8",
+        "steps_completed": "1",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "eb21ea26-5f8a-4693-b3e0-7b137b198d80",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "eb21ea26-5f8a-4693-b3e0-7b137b198d80",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "eb21ea26-5f8a-4693-b3e0-7b137b198d80",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "52c4a50e-3132-486c-a061-e4e7f0357778",
+      "merchant_data": {
+        "id": "52c4a50e-3132-486c-a061-e4e7f0357778",
+        "name": "Test",
+        "external_id": null,
+        "email": "mike+PEtestapp1@twillpayments.com",
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-06-10T05:35:19.060Z",
+        "updated_at": "2025-06-11T21:25:59.322Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "13",
+        "total_steps": "8",
+        "steps_completed": "1",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "52c4a50e-3132-486c-a061-e4e7f0357778",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "52c4a50e-3132-486c-a061-e4e7f0357778",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "52c4a50e-3132-486c-a061-e4e7f0357778",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+      "merchant_data": {
+        "id": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+        "name": "Twill Payments",
+        "external_id": "001",
+        "email": "mike@twillpayments.com",
+        "processing_status": "c",
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "accepted",
+        "created_at": "2025-05-02T20:11:15.787Z",
+        "updated_at": "2025-06-11T21:30:45.120Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "active",
+        "group_name": null,
+        "can_process": true,
+        "mid": "org_477259",
+        "bank_account_verification": "not_applicable",
+        "percentage_completed": "78",
+        "total_steps": "9",
+        "steps_completed": "7",
+        "total_payment_volume": "25.10"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": [
+          {
+            "id": "0d1f57d3-f4ad-4a02-aad9-bda1a89224fa",
+            "name": "Chase",
+            "country_code": "US",
+            "last_4": "1276",
+            "data": {
+              "account_type": "N",
+              "month_opened": "",
+              "day_opened": "",
+              "year_opened": "",
+              "bank_connector_type": null
+            },
+            "active": true,
+            "validation_status": "not_applicable",
+            "validation_method": "none",
+            "last_5": "61276"
+          }
+        ]
+      },
+      "devices": {
+        "data": {
+          "devices": [
+            {
+              "deviceId": "236c7880-7e44-4333-b595-8402ba664b83",
+              "make": null,
+              "model": "iPhone",
+              "lastTransactionDate": null,
+              "dateRegistered": "2025-05-19T23:45:04.468Z",
+              "dateDeregistered": null,
+              "serialNumber": "AA9FAC0A-C263-4A32-9B69-289F137BAE5E",
+              "connectionStatus": "disconnected",
+              "lastConnectedDate": "2025-05-20T00:00:54.645Z",
+              "lastDisconnectedDate": "2025-05-20T00:01:24.683Z",
+              "deviceNickname": "Nader's Phone",
+              "registrationStatus": "registered",
+              "device_type": "ios",
+              "sdk_version": "1.1.202404290517",
+              "app_version": "1.0.18 (2)",
+              "os": null,
+              "os_version": null
+            },
+            {
+              "deviceId": "832d9721-c6c2-4552-a9df-a794075cd7e9",
+              "make": null,
+              "model": "iPhone",
+              "lastTransactionDate": null,
+              "dateRegistered": "2025-05-12T22:53:04.173Z",
+              "dateDeregistered": null,
+              "serialNumber": "C5057A39-B756-4993-AEF7-7FAA235E92BC",
+              "connectionStatus": "disconnected",
+              "lastConnectedDate": "2025-05-27T20:02:37.530Z",
+              "lastDisconnectedDate": "2025-05-27T20:02:38.543Z",
+              "deviceNickname": "mike's iphone",
+              "registrationStatus": "registered",
+              "device_type": "ios",
+              "sdk_version": "1.1.202404290517",
+              "app_version": "1.0.18 (2)",
+              "os": null,
+              "os_version": null
+            }
+          ]
+        }
+      },
+      "payment_links": {
+        "data": [
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": false,
+            "amount": "111.00",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": null,
+            "endDate": "2025-07-16T06:34:12.058Z",
+            "createdAt": "2025-07-09T06:36:52.070Z",
+            "updatedAt": "2025-07-09T06:36:52.070Z",
+            "name": "BDA",
+            "contactInfo": null,
+            "slugId": null,
+            "contactInfoDetails": null,
+            "saveCardConsent": true,
+            "paymentMethods": [
+              "CC_DC",
+              "ACH"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "05081da7-2c89-4763-86e6-89651f0038cc",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "ivim7",
+            "paymentLinkStatus": "ACTIVE",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/ivim7",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/ivim7/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": false,
+            "amount": "53.00",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": null,
+            "endDate": "2025-07-10T17:38:26.006Z",
+            "createdAt": "2025-07-03T17:38:57.485Z",
+            "updatedAt": "2025-07-03T17:38:57.485Z",
+            "name": "Twill Payments Payment Link: 23",
+            "contactInfo": true,
+            "slugId": null,
+            "contactInfoDetails": null,
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "17472e2e-b91e-4011-ad8b-fa4f999d435a",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "o67yg",
+            "paymentLinkStatus": "EXPIRED",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/o67yg",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/o67yg/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": false,
+            "amount": "0.21",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": null,
+            "endDate": "2025-07-04T04:44:25.287Z",
+            "createdAt": "2025-07-03T04:44:43.605Z",
+            "updatedAt": "2025-07-03T04:44:43.605Z",
+            "name": "Twill Payments Payment Link: 22",
+            "contactInfo": true,
+            "slugId": null,
+            "contactInfoDetails": null,
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "52862f44-ca7a-4465-a761-d8b437df497a",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "ec4oj",
+            "paymentLinkStatus": "EXPIRED",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/ec4oj",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/ec4oj/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": false,
+            "amount": "0.55",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": null,
+            "endDate": "2025-07-19T00:00:00.000Z",
+            "createdAt": "2025-07-03T03:48:38.560Z",
+            "updatedAt": "2025-07-03T03:48:38.560Z",
+            "name": "Twill Payments Payment Link: 21",
+            "contactInfo": true,
+            "slugId": null,
+            "contactInfoDetails": null,
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC",
+              "ACH"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "d36dce5e-2edd-4935-880f-33e3a8c4fb68",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "fq6xj",
+            "paymentLinkStatus": "ACTIVE",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/fq6xj",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/fq6xj/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": false,
+            "amount": "35.00",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": "12345",
+            "description": "services to user.",
+            "startDate": null,
+            "endDate": "2025-07-16T00:00:00.000Z",
+            "createdAt": "2025-07-02T22:48:06.226Z",
+            "updatedAt": "2025-07-02T22:48:06.226Z",
+            "name": "Twill Payments Payment Link: 20",
+            "contactInfo": true,
+            "slugId": null,
+            "contactInfoDetails": null,
+            "saveCardConsent": true,
+            "paymentMethods": [
+              "CC_DC",
+              "ACH"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "71027140-c7d3-4f46-bce9-3aa2cc395a4f",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "4ddzg",
+            "paymentLinkStatus": "ACTIVE",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/4ddzg",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/4ddzg/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": true,
+            "amount": "95.00",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": "2025-06-25T17:16:00.000Z",
+            "endDate": null,
+            "createdAt": "2025-06-25T17:17:18.382Z",
+            "updatedAt": "2025-06-25T17:17:18.382Z",
+            "name": "Test IAC#95",
+            "contactInfo": false,
+            "slugId": null,
+            "contactInfoDetails": {
+              "showFirstName": true,
+              "mandatoryFirstName": true,
+              "showLastName": true,
+              "mandatoryLastName": true,
+              "showPhoneNumber": true,
+              "mandatoryPhoneNumber": true,
+              "showEmailAddress": true,
+              "mandatoryEmailAddress": true,
+              "showAddress": true,
+              "mandatoryAddress": false,
+              "showBusinessName": false,
+              "mandatoryBusinessName": false
+            },
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "j578r",
+            "paymentLinkStatus": "ACTIVE",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/j578r",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/j578r/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": true,
+            "amount": "0.67",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": "2025-06-20T16:00:00.000Z",
+            "endDate": null,
+            "createdAt": "2025-06-20T16:01:17.112Z",
+            "updatedAt": "2025-06-20T16:01:17.112Z",
+            "name": "checking address",
+            "contactInfo": true,
+            "slugId": null,
+            "contactInfoDetails": {
+              "showFirstName": true,
+              "mandatoryFirstName": true,
+              "showLastName": true,
+              "mandatoryLastName": true,
+              "showPhoneNumber": true,
+              "mandatoryPhoneNumber": true,
+              "showEmailAddress": true,
+              "mandatoryEmailAddress": true,
+              "showAddress": true,
+              "mandatoryAddress": true,
+              "showBusinessName": false,
+              "mandatoryBusinessName": false
+            },
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "checking_street_address",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "0bviy",
+            "paymentLinkStatus": "COMPLETED",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/0bviy",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/0bviy/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": true,
+            "amount": "0.54",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": "2025-06-19T18:20:00.000Z",
+            "endDate": null,
+            "createdAt": "2025-06-19T18:23:08.323Z",
+            "updatedAt": "2025-06-19T18:23:08.323Z",
+            "name": "corner case 4",
+            "contactInfo": true,
+            "slugId": null,
+            "contactInfoDetails": {
+              "showFirstName": true,
+              "mandatoryFirstName": true,
+              "showLastName": true,
+              "mandatoryLastName": true,
+              "showPhoneNumber": true,
+              "mandatoryPhoneNumber": true,
+              "showEmailAddress": true,
+              "mandatoryEmailAddress": true,
+              "showAddress": false,
+              "mandatoryAddress": false,
+              "showBusinessName": false,
+              "mandatoryBusinessName": false
+            },
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "capture_no_contact_yes_showaddress_hide",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "p3rux",
+            "paymentLinkStatus": "ACTIVE",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/p3rux",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/p3rux/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": true,
+            "amount": "0.53",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": "2025-06-19T18:18:00.000Z",
+            "endDate": null,
+            "createdAt": "2025-06-19T18:20:08.836Z",
+            "updatedAt": "2025-06-19T18:20:08.836Z",
+            "name": "corner case 3",
+            "contactInfo": true,
+            "slugId": null,
+            "contactInfoDetails": {
+              "showFirstName": true,
+              "mandatoryFirstName": true,
+              "showLastName": true,
+              "mandatoryLastName": true,
+              "showPhoneNumber": true,
+              "mandatoryPhoneNumber": true,
+              "showEmailAddress": true,
+              "mandatoryEmailAddress": true,
+              "showAddress": true,
+              "mandatoryAddress": false,
+              "showBusinessName": false,
+              "mandatoryBusinessName": false
+            },
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "capture_no_contactinfo_yes_showaddress_yes_optional",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "scdhh",
+            "paymentLinkStatus": "COMPLETED",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/scdhh",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/scdhh/qr"
+          },
+          {
+            "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+            "oneTimeOnly": true,
+            "amount": "0.62",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": "2025-06-19T18:08:00.000Z",
+            "endDate": null,
+            "createdAt": "2025-06-19T18:12:20.453Z",
+            "updatedAt": "2025-06-19T18:12:20.453Z",
+            "name": "corner case 2",
+            "contactInfo": true,
+            "slugId": null,
+            "contactInfoDetails": {
+              "showFirstName": true,
+              "mandatoryFirstName": true,
+              "showLastName": true,
+              "mandatoryLastName": true,
+              "showPhoneNumber": true,
+              "mandatoryPhoneNumber": true,
+              "showEmailAddress": true,
+              "mandatoryEmailAddress": true,
+              "showAddress": true,
+              "mandatoryAddress": true,
+              "showBusinessName": false,
+              "mandatoryBusinessName": false
+            },
+            "saveCardConsent": true,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "capture_yes_contactinfo_yes_addressshow_yes_mandatory",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Twill Payments LLC",
+            "paymentLinkId": "rtln2",
+            "paymentLinkStatus": "COMPLETED",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/rtln2",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/rtln2/qr"
+          }
+        ],
+        "meta": {
+          "total": 24,
+          "current_page": 1,
+          "total_pages": 3
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+        "data": [
+          {
+            "id": "371de094-8b2b-4b2d-81bd-167a30fefc76",
+            "gatewayId": "viaconex",
+            "gateway": "viaconex",
+            "nickname": "Elavon",
+            "capabilities": {
+              "taptopay": true,
+              "cc_payments": true
+            },
+            "enabled": true
+          },
+          {
+            "id": "01538626-5e98-4d4b-a6a6-7eb1dbe7e539",
+            "gatewayId": "forte",
+            "gateway": "forte",
+            "nickname": "Forte",
+            "capabilities": {
+              "ach_credit": true,
+              "cc_payments": false,
+              "ach_payments": true
+            },
+            "enabled": true
+          }
+        ]
+      },
+      "transactions": {
+        "merchant_id": "a863bb25-edd2-4891-a0e4-ce251ace5f7f",
+        "successful_payments_summary": {
+          "total_amount": 4.56,
+          "total_fees": 0.0,
+          "total_transactions": 5
+        },
+        "monthly_transactions": [
+          {
+            "month": "06/2025",
+            "total_successful_volume": 1.2,
+            "fees": 0.0,
+            "transaction_count": 2
+          },
+          {
+            "month": "07/2025",
+            "total_successful_volume": 3.36,
+            "fees": 0.0,
+            "transaction_count": 3
+          }
+        ]
+      }
+    },
+    {
+      "merchant_id": "0b8a4d40-3ec5-4998-a1ac-8a05cfa54819",
+      "merchant_data": {
+        "id": "0b8a4d40-3ec5-4998-a1ac-8a05cfa54819",
+        "name": "GemTech",
+        "external_id": "GemTech - Luqra",
+        "email": "SUPPORT@GEMTECHPROS.COM",
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "accepted",
+        "created_at": "2025-04-16T18:54:32.924Z",
+        "updated_at": "2025-04-16T18:54:33.101Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "active",
+        "group_name": null,
+        "can_process": true,
+        "mid": "000000276501",
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "104600.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "0b8a4d40-3ec5-4998-a1ac-8a05cfa54819",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "0b8a4d40-3ec5-4998-a1ac-8a05cfa54819",
+        "data": [
+          {
+            "id": "495fd4a9-7699-4b32-9ec1-fbb97104cd33",
+            "gatewayId": "sierra",
+            "gateway": "sierra",
+            "nickname": "Gemtech - Luqra",
+            "capabilities": {
+              "taptopay": true,
+              "cc_payments": true
+            },
+            "enabled": true
+          }
+        ]
+      },
+      "transactions": {
+        "merchant_id": "0b8a4d40-3ec5-4998-a1ac-8a05cfa54819",
+        "successful_payments_summary": {
+          "total_amount": 5000.0,
+          "total_fees": 0.0,
+          "total_transactions": 1
+        },
+        "monthly_transactions": [
+          {
+            "month": "07/2025",
+            "total_successful_volume": 5000.0,
+            "fees": 0.0,
+            "transaction_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "merchant_id": "7ae3ec2a-2b28-4e94-9880-dcc421d888d1",
+      "merchant_data": {
+        "id": "7ae3ec2a-2b28-4e94-9880-dcc421d888d1",
+        "name": "Denali Media LLC",
+        "external_id": "000000309237",
+        "email": "SUPPORT@DENALIMEDIA.AI",
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "accepted",
+        "created_at": "2025-04-07T22:46:31.056Z",
+        "updated_at": "2025-04-07T22:46:31.227Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "active",
+        "group_name": null,
+        "can_process": true,
+        "mid": "000000309237",
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "19501.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [
+          {
+            "merchantId": "7ae3ec2a-2b28-4e94-9880-dcc421d888d1",
+            "oneTimeOnly": true,
+            "amount": "1.00",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": "2025-04-08T05:21:00.000Z",
+            "endDate": null,
+            "createdAt": "2025-04-08T05:22:55.390Z",
+            "updatedAt": "2025-04-08T05:22:55.390Z",
+            "name": "Test",
+            "contactInfo": false,
+            "slugId": "test",
+            "contactInfoDetails": {
+              "showFirstName": true,
+              "mandatoryFirstName": true,
+              "showLastName": true,
+              "mandatoryLastName": true,
+              "showPhoneNumber": true,
+              "mandatoryPhoneNumber": true,
+              "showEmailAddress": true,
+              "mandatoryEmailAddress": true,
+              "showAddress": true,
+              "mandatoryAddress": false,
+              "showBusinessName": false,
+              "mandatoryBusinessName": false
+            },
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "test",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Denali Media LLC",
+            "paymentLinkId": "d4isi",
+            "paymentLinkStatus": "COMPLETED",
+            "paymentLinkUrl": "https://console.payengine.co/payment-link/test",
+            "qrCodeUrl": "https://console.payengine.co/payment-link/test/qr"
+          }
+        ],
+        "meta": {
+          "total": 1,
+          "current_page": 1,
+          "total_pages": 1
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "7ae3ec2a-2b28-4e94-9880-dcc421d888d1",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "7ae3ec2a-2b28-4e94-9880-dcc421d888d1",
+        "data": [
+          {
+            "id": "e64fc98e-212b-467e-af59-be850a8affaa",
+            "gatewayId": "sierra",
+            "gateway": "sierra",
+            "nickname": "Twill - Luqra",
+            "capabilities": {
+              "taptopay": true,
+              "cc_payments": true
+            },
+            "enabled": true
+          }
+        ]
+      },
+      "transactions": {
+        "merchant_id": "7ae3ec2a-2b28-4e94-9880-dcc421d888d1",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "cadc0074-0f19-4df8-842d-fabc51e54009",
+      "merchant_data": {
+        "id": "cadc0074-0f19-4df8-842d-fabc51e54009",
+        "name": "Pursuit Marketing",
+        "external_id": null,
+        "email": "mike@twillpayments.com",
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-04-03T04:03:51.756Z",
+        "updated_at": "2025-04-03T04:03:51.841Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "active",
+        "group_name": null,
+        "can_process": true,
+        "mid": "000000176628",
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Request failed with status code 401",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "cadc0074-0f19-4df8-842d-fabc51e54009",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "cadc0074-0f19-4df8-842d-fabc51e54009",
+        "data": [
+          {
+            "id": "9cc9eb94-c7a5-436c-9805-ecd6796cdf5a",
+            "gatewayId": "nmi",
+            "gateway": "nmi",
+            "nickname": "nmi",
+            "capabilities": {
+              "cc_payments": true
+            },
+            "enabled": true
+          }
+        ]
+      },
+      "transactions": {
+        "merchant_id": "cadc0074-0f19-4df8-842d-fabc51e54009",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "d2425083-33f5-434e-8497-51ff566f774a",
+      "merchant_data": {
+        "id": "d2425083-33f5-434e-8497-51ff566f774a",
+        "name": "Moore Development LLC",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-04-02T05:08:21.233Z",
+        "updated_at": "2025-04-02T05:34:02.841Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "25",
+        "total_steps": "8",
+        "steps_completed": "2",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "d2425083-33f5-434e-8497-51ff566f774a",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "d2425083-33f5-434e-8497-51ff566f774a",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "d2425083-33f5-434e-8497-51ff566f774a",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "09db1bc0-a8c3-46b6-b10f-f4f849141eaa",
+      "merchant_data": {
+        "id": "09db1bc0-a8c3-46b6-b10f-f4f849141eaa",
+        "name": "Sankaku Complex",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "f604024f-37d3-432f-8523-1ef8226868fe",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "accepted",
+        "created_at": "2025-03-21T18:15:14.067Z",
+        "updated_at": "2025-04-09T03:52:22.839Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "15",
+        "total_steps": "7",
+        "steps_completed": "1",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "message": "Merchant is not configured for payment",
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "09db1bc0-a8c3-46b6-b10f-f4f849141eaa",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "09db1bc0-a8c3-46b6-b10f-f4f849141eaa",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "09db1bc0-a8c3-46b6-b10f-f4f849141eaa",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    }
+  ]
+}

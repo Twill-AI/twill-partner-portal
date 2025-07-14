@@ -1,0 +1,1606 @@
+{
+  "extraction_time": "2025-07-13T20:13:46.727798",
+  "status": "success",
+  "message": "Successfully extracted data for 20 merchants",
+  "total_merchants": 20,
+  "merchants": [
+    {
+      "merchant_id": "033e79eb-d07e-48e4-838e-bc925e8027a2",
+      "merchant_data": {
+        "id": "033e79eb-d07e-48e4-838e-bc925e8027a2",
+        "name": "Test Merchant",
+        "external_id": "test_external_id",
+        "email": "testmerchant@example.com",
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-11T04:27:07.269Z",
+        "updated_at": "2025-07-11T09:13:05.205Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "25",
+        "total_steps": "8",
+        "steps_completed": "2",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "033e79eb-d07e-48e4-838e-bc925e8027a2",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "033e79eb-d07e-48e4-838e-bc925e8027a2",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "033e79eb-d07e-48e4-838e-bc925e8027a2",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+      "merchant_data": {
+        "id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+        "name": "Fan Szechuan Cuisine Inc",
+        "external_id": "001",
+        "email": "Loharriette@gmail.com",
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "accepted",
+        "created_at": "2025-07-09T19:46:11.484Z",
+        "updated_at": "2025-07-10T00:05:31.029Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": "not_applicable",
+        "percentage_completed": "100",
+        "total_steps": "7",
+        "steps_completed": "7",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": [
+          {
+            "id": "7acc3df2-e01f-4823-9eaf-a311d87f81e6",
+            "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+            "account_id": "23611e6a-698b-4bff-8040-a4c5b6f507ff",
+            "attachment_type": "PS",
+            "attachment_description": null,
+            "attachment_format": "pdf",
+            "attachment_size": 10397,
+            "created_at": "2025-07-10T00:02:18.824Z",
+            "updated_at": "2025-07-10T00:02:18.824Z",
+            "attachment_name": "1.3.2 20250601-0629_Online Sales Summary.pdf"
+          },
+          {
+            "id": "2722b43a-3d04-4b5c-8869-da2945b3c53b",
+            "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+            "account_id": "23611e6a-698b-4bff-8040-a4c5b6f507ff",
+            "attachment_type": "PS",
+            "attachment_description": null,
+            "attachment_format": "pdf",
+            "attachment_size": 1006075,
+            "created_at": "2025-07-10T00:02:36.846Z",
+            "updated_at": "2025-07-10T00:02:36.846Z",
+            "attachment_name": "1.2.1 20250501-0531_InHouse_Report_15570.pdf"
+          },
+          {
+            "id": "948a81c3-fd63-4154-8a52-ca299a3c0437",
+            "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+            "account_id": "23611e6a-698b-4bff-8040-a4c5b6f507ff",
+            "attachment_type": "PS",
+            "attachment_description": null,
+            "attachment_format": "pdf",
+            "attachment_size": 426752,
+            "created_at": "2025-07-10T00:02:50.845Z",
+            "updated_at": "2025-07-10T00:02:50.845Z",
+            "attachment_name": "1.2.2 20250501-0531_Online_Report_15570.pdf"
+          },
+          {
+            "id": "e129df24-41f7-46ff-bdd3-e9a494d18acf",
+            "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+            "account_id": "23611e6a-698b-4bff-8040-a4c5b6f507ff",
+            "attachment_type": "PS",
+            "attachment_description": null,
+            "attachment_format": "pdf",
+            "attachment_size": 987957,
+            "created_at": "2025-07-10T00:03:24.700Z",
+            "updated_at": "2025-07-10T00:03:24.700Z",
+            "attachment_name": "1.1.2 20250401-0430_InHouse_Report_15570.pdf"
+          },
+          {
+            "id": "7f4f1893-3e16-4f4f-8077-c315ffaa2ce5",
+            "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+            "account_id": "23611e6a-698b-4bff-8040-a4c5b6f507ff",
+            "attachment_type": "PS",
+            "attachment_description": null,
+            "attachment_format": "pdf",
+            "attachment_size": 45397,
+            "created_at": "2025-07-10T00:04:04.306Z",
+            "updated_at": "2025-07-10T00:04:04.306Z",
+            "attachment_name": "1.3.1 20250601-0629_InHouse Sales Summary.pdf"
+          },
+          {
+            "id": "4672fdfe-9c5e-4ada-81c7-a11b61f223a8",
+            "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+            "account_id": "23611e6a-698b-4bff-8040-a4c5b6f507ff",
+            "attachment_type": "PS",
+            "attachment_description": null,
+            "attachment_format": "pdf",
+            "attachment_size": 419852,
+            "created_at": "2025-07-10T00:04:32.856Z",
+            "updated_at": "2025-07-10T00:04:32.856Z",
+            "attachment_name": "1.1.1 20250401-0430 Online_Report_15570.pdf"
+          },
+          {
+            "id": "e9be53da-6126-4b0d-bfbe-6234bf359b91",
+            "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+            "account_id": "23611e6a-698b-4bff-8040-a4c5b6f507ff",
+            "attachment_type": "OTH",
+            "attachment_description": "Owner ID",
+            "attachment_format": "jpg",
+            "attachment_size": 194215,
+            "created_at": "2025-07-10T00:05:15.257Z",
+            "updated_at": "2025-07-10T00:05:15.257Z",
+            "attachment_name": "TIANZE, NU- ID.jpg"
+          }
+        ]
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": [
+          {
+            "id": "53896cf6-0014-4d05-aca8-0b6f51a7b88e",
+            "name": "Fan Szechuan Cuisine INC",
+            "country_code": "US",
+            "last_4": "4218",
+            "data": {
+              "account_type": "N",
+              "month_opened": "",
+              "day_opened": "",
+              "year_opened": "",
+              "bank_connector_type": null
+            },
+            "active": true,
+            "validation_status": "not_applicable",
+            "validation_method": "none",
+            "last_5": "54218"
+          }
+        ]
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "25cb9232-45ff-4b4a-99b9-b7c7aeea5b81",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "434bcb09-8713-4307-9683-b3dde58618d0",
+      "merchant_data": {
+        "id": "434bcb09-8713-4307-9683-b3dde58618d0",
+        "name": "mikesandboxtest7",
+        "external_id": "001",
+        "email": "mike+sandbox7@twillpayments.com",
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "invited",
+        "created_at": "2025-07-09T19:13:07.986Z",
+        "updated_at": "2025-07-09T19:13:08.458Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "434bcb09-8713-4307-9683-b3dde58618d0",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "434bcb09-8713-4307-9683-b3dde58618d0",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "434bcb09-8713-4307-9683-b3dde58618d0",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "0050a7e5-6587-46db-ac3b-6f0772409a3d",
+      "merchant_data": {
+        "id": "0050a7e5-6587-46db-ac3b-6f0772409a3d",
+        "name": "Acme Widgets",
+        "external_id": null,
+        "email": "mike@twillpayments.com",
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": "invited",
+        "created_at": "2025-07-08T19:21:56.297Z",
+        "updated_at": "2025-07-08T19:21:56.437Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "0050a7e5-6587-46db-ac3b-6f0772409a3d",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "0050a7e5-6587-46db-ac3b-6f0772409a3d",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "0050a7e5-6587-46db-ac3b-6f0772409a3d",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "a915eb65-a098-4782-95a9-9270e042b8ec",
+      "merchant_data": {
+        "id": "a915eb65-a098-4782-95a9-9270e042b8ec",
+        "name": "Twill Payments 2",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T16:51:44.517Z",
+        "updated_at": "2025-07-03T16:51:44.624Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "a915eb65-a098-4782-95a9-9270e042b8ec",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "a915eb65-a098-4782-95a9-9270e042b8ec",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "a915eb65-a098-4782-95a9-9270e042b8ec",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "c852bcc7-9a74-441c-a18a-d26fce33c497",
+      "merchant_data": {
+        "id": "c852bcc7-9a74-441c-a18a-d26fce33c497",
+        "name": "Twill Payments 2",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T16:45:05.044Z",
+        "updated_at": "2025-07-03T16:45:05.434Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "c852bcc7-9a74-441c-a18a-d26fce33c497",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "c852bcc7-9a74-441c-a18a-d26fce33c497",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "c852bcc7-9a74-441c-a18a-d26fce33c497",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "c6befa40-df03-4f34-bcbd-c8eacd34f8cb",
+      "merchant_data": {
+        "id": "c6befa40-df03-4f34-bcbd-c8eacd34f8cb",
+        "name": "Twill Payments 2",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T16:44:37.715Z",
+        "updated_at": "2025-07-03T16:44:37.949Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "c6befa40-df03-4f34-bcbd-c8eacd34f8cb",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "c6befa40-df03-4f34-bcbd-c8eacd34f8cb",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "c6befa40-df03-4f34-bcbd-c8eacd34f8cb",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "cb30e57d-e6d9-418a-9508-6a27e2a966d3",
+      "merchant_data": {
+        "id": "cb30e57d-e6d9-418a-9508-6a27e2a966d3",
+        "name": "Twill Payments 2",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T16:44:37.712Z",
+        "updated_at": "2025-07-03T16:44:37.962Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "cb30e57d-e6d9-418a-9508-6a27e2a966d3",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "cb30e57d-e6d9-418a-9508-6a27e2a966d3",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "cb30e57d-e6d9-418a-9508-6a27e2a966d3",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "4536ec12-a842-430a-91fe-08f28efb67d9",
+      "merchant_data": {
+        "id": "4536ec12-a842-430a-91fe-08f28efb67d9",
+        "name": "Twill Payments 2",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:50:34.708Z",
+        "updated_at": "2025-07-03T14:50:34.919Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "4536ec12-a842-430a-91fe-08f28efb67d9",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "4536ec12-a842-430a-91fe-08f28efb67d9",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "4536ec12-a842-430a-91fe-08f28efb67d9",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+      "merchant_data": {
+        "id": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+        "name": "Thiel - Bartoletti",
+        "external_id": null,
+        "email": "Sven_Abernathy52@gmail.com",
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:43:23.794Z",
+        "updated_at": "2025-07-09T19:51:18.798Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "active",
+        "group_name": null,
+        "can_process": true,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "78",
+        "total_steps": "9",
+        "steps_completed": "7",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": [
+          {
+            "id": "a311b6b0-f4d4-4797-b1f7-8963155187ad",
+            "name": "My Bank Account",
+            "country_code": "US",
+            "last_4": "5355",
+            "data": {
+              "account_type": "Y",
+              "month_opened": 2,
+              "day_opened": 2,
+              "year_opened": "1995"
+            },
+            "active": true,
+            "validation_status": null,
+            "validation_method": null,
+            "last_5": "56789"
+          }
+        ]
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [
+          {
+            "merchantId": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+            "oneTimeOnly": false,
+            "amount": "600.00",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": null,
+            "endDate": "2025-07-31T00:00:00.000Z",
+            "createdAt": "2025-07-10T12:02:28.524Z",
+            "updatedAt": "2025-07-10T12:02:28.524Z",
+            "name": "Test",
+            "contactInfo": false,
+            "slugId": null,
+            "contactInfoDetails": null,
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "650d24c6-9778-4a10-8f29-a3d34e296c24",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Thiel - Bartoletti",
+            "paymentLinkId": "lq0a7",
+            "paymentLinkStatus": "ACTIVE",
+            "paymentLinkUrl": "https://console.payengine.dev/payment-link/lq0a7",
+            "qrCodeUrl": "https://console.payengine.dev/payment-link/lq0a7/qr"
+          },
+          {
+            "merchantId": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+            "oneTimeOnly": false,
+            "amount": "500.00",
+            "currencyCode": "USD",
+            "salesTax": null,
+            "orderNumber": null,
+            "description": null,
+            "startDate": null,
+            "endDate": "2025-07-11T03:52:36.346Z",
+            "createdAt": "2025-07-10T03:52:43.285Z",
+            "updatedAt": "2025-07-10T03:52:43.285Z",
+            "name": "Test",
+            "contactInfo": null,
+            "slugId": null,
+            "contactInfoDetails": null,
+            "saveCardConsent": false,
+            "paymentMethods": [
+              "CC_DC"
+            ],
+            "useSameAmount": true,
+            "ccAmountNote": null,
+            "achAmountNote": null,
+            "enableCaptcha": false,
+            "internalTransactionID": "55e03d0a-4e64-49de-a90a-5f0865d006a9",
+            "customer": null,
+            "type": "payment_link",
+            "success_text": null,
+            "failure_text": null,
+            "merchantName": "Thiel - Bartoletti",
+            "paymentLinkId": "xi5zp",
+            "paymentLinkStatus": "EXPIRED",
+            "paymentLinkUrl": "https://console.payengine.dev/payment-link/xi5zp",
+            "qrCodeUrl": "https://console.payengine.dev/payment-link/xi5zp/qr"
+          }
+        ],
+        "meta": {
+          "total": 2,
+          "current_page": 1,
+          "total_pages": 1
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "bb297cfb-6a2e-4655-b3c1-f93f6cda58c2",
+        "successful_payments_summary": {
+          "total_amount": 500.0,
+          "total_fees": 0.0,
+          "total_transactions": 1
+        },
+        "monthly_transactions": [
+          {
+            "month": "07/2025",
+            "total_successful_volume": 500.0,
+            "fees": 0.0,
+            "transaction_count": 1
+          }
+        ]
+      }
+    },
+    {
+      "merchant_id": "fd19e8d0-2434-4762-90dc-f33d135b486b",
+      "merchant_data": {
+        "id": "fd19e8d0-2434-4762-90dc-f33d135b486b",
+        "name": "Twill Payments 1",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:42:24.580Z",
+        "updated_at": "2025-07-03T14:42:24.767Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "fd19e8d0-2434-4762-90dc-f33d135b486b",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "fd19e8d0-2434-4762-90dc-f33d135b486b",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "fd19e8d0-2434-4762-90dc-f33d135b486b",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "10a6ffbf-26e5-47f0-a877-0b8e171e34de",
+      "merchant_data": {
+        "id": "10a6ffbf-26e5-47f0-a877-0b8e171e34de",
+        "name": "Twill Payments 1",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:42:21.343Z",
+        "updated_at": "2025-07-03T14:42:22.033Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "10a6ffbf-26e5-47f0-a877-0b8e171e34de",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "10a6ffbf-26e5-47f0-a877-0b8e171e34de",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "10a6ffbf-26e5-47f0-a877-0b8e171e34de",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "e58bb299-4740-4575-8ea0-5e731aa83fce",
+      "merchant_data": {
+        "id": "e58bb299-4740-4575-8ea0-5e731aa83fce",
+        "name": "Twill Payments 1",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:42:14.014Z",
+        "updated_at": "2025-07-03T14:42:14.247Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "e58bb299-4740-4575-8ea0-5e731aa83fce",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "e58bb299-4740-4575-8ea0-5e731aa83fce",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "e58bb299-4740-4575-8ea0-5e731aa83fce",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "f6632d1f-f2f7-4d40-ac2e-865040011509",
+      "merchant_data": {
+        "id": "f6632d1f-f2f7-4d40-ac2e-865040011509",
+        "name": "Twill Payments 1",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:34:38.469Z",
+        "updated_at": "2025-07-03T14:34:38.577Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "f6632d1f-f2f7-4d40-ac2e-865040011509",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "f6632d1f-f2f7-4d40-ac2e-865040011509",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "f6632d1f-f2f7-4d40-ac2e-865040011509",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "7b6aeec0-ec4f-48d0-a4c5-f9f39a05198e",
+      "merchant_data": {
+        "id": "7b6aeec0-ec4f-48d0-a4c5-f9f39a05198e",
+        "name": "Twill Payments 1",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:34:38.410Z",
+        "updated_at": "2025-07-03T14:34:38.727Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "7b6aeec0-ec4f-48d0-a4c5-f9f39a05198e",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "7b6aeec0-ec4f-48d0-a4c5-f9f39a05198e",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "7b6aeec0-ec4f-48d0-a4c5-f9f39a05198e",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "a89ceea8-07ac-4214-b804-7bc952a914c0",
+      "merchant_data": {
+        "id": "a89ceea8-07ac-4214-b804-7bc952a914c0",
+        "name": "Twill Payments 1",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:29:12.042Z",
+        "updated_at": "2025-07-03T14:29:12.209Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "a89ceea8-07ac-4214-b804-7bc952a914c0",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "a89ceea8-07ac-4214-b804-7bc952a914c0",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "a89ceea8-07ac-4214-b804-7bc952a914c0",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "2f0a3fbf-fb2b-4bf9-ab8b-b89b1a99e856",
+      "merchant_data": {
+        "id": "2f0a3fbf-fb2b-4bf9-ab8b-b89b1a99e856",
+        "name": "Twill Payments 1",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:29:08.839Z",
+        "updated_at": "2025-07-03T14:29:09.320Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "2f0a3fbf-fb2b-4bf9-ab8b-b89b1a99e856",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "2f0a3fbf-fb2b-4bf9-ab8b-b89b1a99e856",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "2f0a3fbf-fb2b-4bf9-ab8b-b89b1a99e856",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "9b15c9a1-d8a5-4294-8daf-aeff98dd0771",
+      "merchant_data": {
+        "id": "9b15c9a1-d8a5-4294-8daf-aeff98dd0771",
+        "name": "Twill Payments 1",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T14:29:08.836Z",
+        "updated_at": "2025-07-03T14:29:09.321Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "9b15c9a1-d8a5-4294-8daf-aeff98dd0771",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "9b15c9a1-d8a5-4294-8daf-aeff98dd0771",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "9b15c9a1-d8a5-4294-8daf-aeff98dd0771",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "d3224494-938c-4805-94e9-b58f24fc6c23",
+      "merchant_data": {
+        "id": "d3224494-938c-4805-94e9-b58f24fc6c23",
+        "name": "test_create_integration__payengine_no_proxy_no_public_token",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-03T07:13:15.164Z",
+        "updated_at": "2025-07-03T07:13:15.343Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "d3224494-938c-4805-94e9-b58f24fc6c23",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "d3224494-938c-4805-94e9-b58f24fc6c23",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "d3224494-938c-4805-94e9-b58f24fc6c23",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    },
+    {
+      "merchant_id": "dea9281e-4a69-461d-ba92-fd1d5645f88e",
+      "merchant_data": {
+        "id": "dea9281e-4a69-461d-ba92-fd1d5645f88e",
+        "name": "Twill Payments",
+        "external_id": null,
+        "email": null,
+        "processing_status": null,
+        "feeschedule_id": "ccd3e8ca-338e-43a3-b85b-7e08d1a834d5",
+        "gateway_feeschedule_id": null,
+        "merchant_portal_invite": null,
+        "created_at": "2025-07-02T13:56:37.874Z",
+        "updated_at": "2025-07-02T13:56:38.189Z",
+        "parent_merchant_id": null,
+        "group_id": null,
+        "status": "editing",
+        "group_name": null,
+        "can_process": false,
+        "mid": null,
+        "bank_account_verification": null,
+        "percentage_completed": "0",
+        "total_steps": "7",
+        "steps_completed": "0",
+        "total_payment_volume": "0.00"
+      },
+      "details": null,
+      "documents": {
+        "message": "succeeded",
+        "data": []
+      },
+      "bank_accounts": {
+        "message": "succeeded",
+        "data": []
+      },
+      "devices": {
+        "data": {
+          "devices": []
+        }
+      },
+      "payment_links": {
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "recurring_payment_plans": {
+        "merchantId": "dea9281e-4a69-461d-ba92-fd1d5645f88e",
+        "data": [],
+        "meta": {
+          "total": 0,
+          "current_page": 1,
+          "total_pages": 0
+        }
+      },
+      "gateways": {
+        "merchantId": "dea9281e-4a69-461d-ba92-fd1d5645f88e",
+        "data": []
+      },
+      "transactions": {
+        "merchant_id": "dea9281e-4a69-461d-ba92-fd1d5645f88e",
+        "successful_payments_summary": {
+          "total_amount": 0.0,
+          "total_fees": 0.0,
+          "total_transactions": 0
+        },
+        "monthly_transactions": []
+      }
+    }
+  ]
+}
