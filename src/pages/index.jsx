@@ -4,6 +4,8 @@ import Dashboard from "./Dashboard";
 
 import Merchants from "./Merchants";
 
+import Users from "./Users";
+
 import CommissionReports from "./CommissionReports";
 
 import Pipeline from "./Pipeline";
@@ -17,6 +19,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 const PAGES = {
     Dashboard: Dashboard,
     Merchants: Merchants,
+    Users: Users,
     CommissionReports: CommissionReports,
     Pipeline: Pipeline,
     RiskManagement: RiskManagement
@@ -46,6 +49,7 @@ function PagesContent() {
                     <Route path="/" element={<Dashboard />} />
                     <Route path="/Dashboard" element={<Dashboard />} />
                     <Route path="/Merchants" element={<Merchants />} />
+                    <Route path="/Users" element={<Users />} />
                     <Route path="/CommissionReports" element={<CommissionReports />} />
                     <Route path="/Pipeline" element={<Pipeline />} />
                     <Route path="/RiskManagement" element={<RiskManagement />} />

@@ -11,7 +11,8 @@ import {
   Bell,
   Shield,
   FileText,
-  Settings
+  Settings,
+  UserCheck
 } from "lucide-react";
 import { CompactDataSourceToggle } from "@/components/ui/DataSourceToggle";
 import { TwillPaymentLogoFull } from "@/components/ui/TwillLogo";
@@ -40,6 +41,11 @@ const navigationItems = [
     title: "Merchants",
     url: createPageUrl("Merchants"),
     icon: Building2,
+  },
+  {
+    title: "Users",
+    url: createPageUrl("Users"),
+    icon: UserCheck,
   },
   {
     title: "Commission Reports",
@@ -83,8 +89,8 @@ export default function Layout({ children, currentPageName }) {
               <SidebarGroupContent>
                 <SidebarMenu className="space-y-1">
                   {navigationItems.map((item) => {
-                    // Disable Pipeline, Risk Management, and Insights & Alerts in PayEngine mode
-                    const isDisabled = isPayEngineMode && (item.title === 'Pipeline' || item.title === 'Risk Management' || item.title === 'Insights & Alerts');
+                    // Disable Commission Reports, Pipeline, Risk Management, and Insights & Alerts in PayEngine mode
+                    const isDisabled = isPayEngineMode && (item.title === 'Commission Reports' || item.title === 'Pipeline' || item.title === 'Risk Management' || item.title === 'Insights & Alerts');
                     
                     return (
                       <SidebarMenuItem key={item.title}>

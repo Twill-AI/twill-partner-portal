@@ -119,7 +119,7 @@ const getRiskIcon = (riskLevel) => {
   }
 };
 
-const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh }) => {
+const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh, initialTab = 'all' }) => {
   // State
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(1);
@@ -130,7 +130,7 @@ const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh }) =>
     key: 'business_name', 
     direction: 'asc' 
   });
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState(initialTab);
   const [filteredMerchants, setFilteredMerchants] = useState([]);
 
   // Update total count when merchants change
@@ -370,22 +370,42 @@ const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh }) =>
       )
     },
     {
-      id: 'metrics',
-      header: 'Metrics',
-      width: '180px',
+      id: 'source',
+      header: 'Source',
+      accessor: 'source',
+      width: '120px',
+      sortable: true,
       cell: (row) => (
-        <div className="grid grid-cols-2 gap-2">
-          <div>
-            <p className="text-sm text-black50">Approval</p>
-            <p className="text-sm font-medium text-black50">{formatPercentage(row.approval_rate || 0)}</p>
+        <div className="flex items-center">
+          <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+            row.source === 'EMS' ? 'bg-blue-100 text-blue-800' :
+            row.source === 'LUQRA' ? 'bg-purple-100 text-purple-800' :
+            row.source === 'ELAVON' ? 'bg-green-100 text-green-800' :
+            row.source === 'NEXIO' ? 'bg-orange-100 text-orange-800' :
+            'bg-gray-100 text-gray-800'
+          }`}>
+            {row.source || 'N/A'}
+          </span>
+        </div>
+      )
+    },
+    {
+      id: 'rep',
+      header: 'Rep',
+      accessor: 'rep',
+      width: '140px',
+      sortable: true,
+      cell: (row) => (
+        <div className="flex items-center">
+          <div className="flex-shrink-0 h-8 w-8">
+            <div className="h-8 w-8 rounded-full bg-gradient-to-br from-azure100 to-periwinkle50 flex items-center justify-center">
+              <span className="text-xs font-medium text-white">
+                {row.rep ? row.rep.split(' ').map(n => n[0]).join('').toUpperCase() : 'N/A'}
+              </span>
+            </div>
           </div>
-          <div>
-            <p className="text-sm text-black50">Chargeback</p>
-            <p className={`text-sm font-medium ${
-              parseFloat(row.chargeback_rate || 0) > 1 ? 'text-error' : 'text-green'
-            }`}>
-              {formatPercentage(row.chargeback_rate || 0)}
-            </p>
+          <div className="ml-3">
+            <p className="text-sm font-medium text-black50">{row.rep || 'Unassigned'}</p>
           </div>
         </div>
       )

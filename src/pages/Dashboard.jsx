@@ -46,7 +46,7 @@ export default function Dashboard() {
   const totalVolume = Array.isArray(merchants) ? merchants.reduce((sum, m) => sum + (m.monthly_volume || 0), 0) : 0;
   const totalCommission = Array.isArray(commissions) ? commissions.reduce((sum, c) => sum + (c.commission_amount || 0), 0) : 0;
   const activeMerchants = Array.isArray(merchants) ? merchants.filter(m => m.status === 'active').length : 0;
-  const riskMerchants = Array.isArray(merchants) ? merchants.filter(m => m.risk_level === 'high' || m.risk_level === 'critical').length : 0;
+  const underwritingAlerts = Array.isArray(merchants) ? merchants.filter(m => m.status === 'in_review').length : 0;
 
   // Generate real volume chart data from commissions
   const generateVolumeChartData = () => {
@@ -182,15 +182,17 @@ export default function Dashboard() {
           trend={calculateTrend(activeMerchants, 'merchants')}
           trendDirection="up"
           subtitle="Currently processing"
+          href="/merchants?tab=active"
         />
         <MetricCard
-          title="Risk Alerts"
-          value={riskMerchants}
+          title="Underwriting Alerts"
+          value={underwritingAlerts}
           icon={AlertTriangle}
-          trend={calculateTrend(riskMerchants, 'risk')}
-          trendDirection={riskMerchants > 1 ? "up" : "down"}
-          subtitle="High/Critical risk"
-          className={riskMerchants > 0 ? "border-l-4 border-red-500" : ""}
+          trend={calculateTrend(underwritingAlerts, 'underwriting')}
+          trendDirection={underwritingAlerts > 1 ? "up" : "down"}
+          subtitle="Needs attention"
+          className={underwritingAlerts > 0 ? "border-l-4 border-amber-500" : ""}
+          href="/merchants?tab=in_review"
         />
       </div>
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { dataService } from '../services/dataService';
 import { useDataSource } from '../contexts/DataSourceContext';
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,10 @@ export default function Merchants() {
   const [isLoading, setIsLoading] = useState(true);
   const [showOnboardingForm, setShowOnboardingForm] = useState(false);
   const { dataSource } = useDataSource();
+  const [searchParams] = useSearchParams();
+  
+  // Get initial tab from URL parameters
+  const initialTab = searchParams.get('tab') || 'all';
 
   useEffect(() => {
     loadMerchants();
@@ -89,6 +94,7 @@ export default function Merchants() {
           isLoading={isLoading}
           onMerchantSelect={handleMerchantSelect}
           onRefresh={handleRefreshMerchants}
+          initialTab={initialTab}
         />
       </div>
 

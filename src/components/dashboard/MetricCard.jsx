@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { TrendingUp, TrendingDown } from "lucide-react";
 
@@ -9,10 +10,15 @@ export default function MetricCard({
   trend, 
   trendDirection,
   subtitle,
-  className = ""
+  className = "",
+  href
 }) {
+  const CardWrapper = href ? Link : 'div';
+  const cardProps = href ? { to: href } : {};
+  
   return (
-    <Card className={`relative overflow-hidden border-0 shadow-md shadow-[rgba(13,10,44,0.08)] bg-white ${className}`}>
+    <CardWrapper {...cardProps} className={href ? 'block' : ''}>
+      <Card className={`relative overflow-hidden border-0 shadow-md shadow-[rgba(13,10,44,0.08)] bg-white ${href ? 'hover:shadow-lg transition-shadow cursor-pointer' : ''} ${className}`}>
       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-azure100/10 to-transparent rounded-full transform translate-x-16 -translate-y-16" />
       <CardHeader className="p-6 pb-3">
         <div className="flex justify-between items-start">
@@ -43,6 +49,7 @@ export default function MetricCard({
           </div>
         </CardContent>
       )}
-    </Card>
+      </Card>
+    </CardWrapper>
   );
 }

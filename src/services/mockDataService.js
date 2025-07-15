@@ -68,7 +68,9 @@ const mockMerchants = [
     chargeback_rate: 0.12,
     approval_rate: 94.8,
     notes: "High-performing tech merchant with excellent payment history",
-    fee_schedule_id: "fee_002" // Premium Processing
+    fee_schedule_id: "fee_002", // Premium Processing
+    source: "EMS",
+    rep: "Sarah Johnson"
   },
   {
     merchant_id: "mer_002",
@@ -95,7 +97,9 @@ const mockMerchants = [
     chargeback_rate: 0.28,
     approval_rate: 92.1,
     notes: "Sustainable retail business with growing transaction volume",
-    fee_schedule_id: "fee_001" // Standard Processing
+    fee_schedule_id: "fee_001", // Standard Processing
+    source: "LUQRA",
+    rep: "Michael Chen"
   },
   {
     merchant_id: "mer_003",
@@ -123,7 +127,67 @@ const mockMerchants = [
     approval_rate: 87.3,
     notes: "Please provide 3 months bank statements.",
     status_message: "Please provide 3 months bank statements.",
-    fee_schedule_id: "fee_003" // High Risk Processing
+    fee_schedule_id: "fee_003", // High Risk Processing
+    source: "ELAVON",
+    rep: "Emily Rodriguez"
+  },
+  {
+    merchant_id: "mer_004",
+    business_name: "Fresh Food Market",
+    dba_name: "Fresh Market",
+    business_type: "Retail",
+    status: "in_review",
+    risk_level: "low",
+    monthly_volume: 450000,
+    monthly_commission: 11250,
+    logo_url: "https://logo.clearbit.com/freshmarket.com",
+    created_date: "2025-07-10T10:00:00Z",
+    contact_email: "info@freshmarket.com",
+    phone: "+1-555-0456",
+    address: {
+      street: "456 Market Street",
+      city: "Seattle",
+      state: "WA",
+      zip: "98101"
+    },
+    processing_start_date: null,
+    average_transaction: 75,
+    transaction_count: 0,
+    chargeback_rate: 0,
+    approval_rate: 0,
+    notes: "New merchant pending approval",
+    fee_schedule_id: "fee_001",
+    source: "NEXIO",
+    rep: "David Kim"
+  },
+  {
+    merchant_id: "mer_005",
+    business_name: "Fitness Plus Gym",
+    dba_name: "Fitness Plus",
+    business_type: "Services",
+    status: "pending",
+    risk_level: "medium",
+    monthly_volume: 320000,
+    monthly_commission: 8000,
+    logo_url: "https://logo.clearbit.com/fitnessplus.com",
+    created_date: "2025-07-12T14:30:00Z",
+    contact_email: "admin@fitnessplus.com",
+    phone: "+1-555-0789",
+    address: {
+      street: "789 Fitness Ave",
+      city: "Austin",
+      state: "TX",
+      zip: "73301"
+    },
+    processing_start_date: null,
+    average_transaction: 120,
+    transaction_count: 0,
+    chargeback_rate: 0,
+    approval_rate: 0,
+    notes: "Gym membership and personal training services",
+    fee_schedule_id: "fee_002",
+    source: "EMS",
+    rep: "Sarah Johnson"
   }
 ];
 
@@ -272,6 +336,130 @@ const mockUser = {
   }
 };
 
+// Mock Users Data for Sales Team
+const mockUsers = [
+  {
+    user_id: "user_001",
+    name: "Sarah Johnson",
+    email: "sarah.johnson@twill.ai",
+    role: "Sales Manager",
+    submissions: 45,
+    active: true,
+    volume: 2850000,
+    commission_structure: "Tiered - 2.5-3.5%",
+    created_date: "2023-01-15T00:00:00Z",
+    last_login: "2024-01-20T14:30:00Z",
+    monthly_submissions: 12,
+    conversion_rate: 78,
+    total_commission: 89250
+  },
+  {
+    user_id: "user_002",
+    name: "Michael Chen",
+    email: "michael.chen@twill.ai",
+    role: "Senior Sales Rep",
+    submissions: 38,
+    active: true,
+    volume: 2100000,
+    commission_structure: "Flat - 2.8%",
+    created_date: "2023-03-10T00:00:00Z",
+    last_login: "2024-01-20T16:45:00Z",
+    monthly_submissions: 10,
+    conversion_rate: 82,
+    total_commission: 58800
+  },
+  {
+    user_id: "user_003",
+    name: "Emily Rodriguez",
+    email: "emily.rodriguez@twill.ai",
+    role: "Sales Rep",
+    submissions: 29,
+    active: true,
+    volume: 1650000,
+    commission_structure: "Tiered - 2.0-3.0%",
+    created_date: "2023-06-20T00:00:00Z",
+    last_login: "2024-01-19T11:20:00Z",
+    monthly_submissions: 8,
+    conversion_rate: 75,
+    total_commission: 41250
+  },
+  {
+    user_id: "user_004",
+    name: "David Thompson",
+    email: "david.thompson@twill.ai",
+    role: "Sales Rep",
+    submissions: 22,
+    active: true,
+    volume: 1200000,
+    commission_structure: "Flat - 2.5%",
+    created_date: "2023-08-05T00:00:00Z",
+    last_login: "2024-01-20T09:15:00Z",
+    monthly_submissions: 6,
+    conversion_rate: 68,
+    total_commission: 30000
+  },
+  {
+    user_id: "user_005",
+    name: "Lisa Park",
+    email: "lisa.park@twill.ai",
+    role: "Junior Sales Rep",
+    submissions: 15,
+    active: true,
+    volume: 850000,
+    commission_structure: "Tiered - 1.8-2.5%",
+    created_date: "2023-10-12T00:00:00Z",
+    last_login: "2024-01-18T13:40:00Z",
+    monthly_submissions: 4,
+    conversion_rate: 73,
+    total_commission: 19125
+  },
+  {
+    user_id: "user_006",
+    name: "Robert Wilson",
+    email: "robert.wilson@twill.ai",
+    role: "Sales Rep",
+    submissions: 31,
+    active: false,
+    volume: 1800000,
+    commission_structure: "Flat - 2.7%",
+    created_date: "2023-04-18T00:00:00Z",
+    last_login: "2024-01-10T10:30:00Z",
+    monthly_submissions: 0,
+    conversion_rate: 71,
+    total_commission: 48600
+  },
+  {
+    user_id: "user_007",
+    name: "Amanda Foster",
+    email: "amanda.foster@twill.ai",
+    role: "Sales Manager",
+    submissions: 52,
+    active: true,
+    volume: 3200000,
+    commission_structure: "Tiered - 3.0-4.0%",
+    created_date: "2022-11-08T00:00:00Z",
+    last_login: "2024-01-20T17:20:00Z",
+    monthly_submissions: 14,
+    conversion_rate: 85,
+    total_commission: 112000
+  },
+  {
+    user_id: "user_008",
+    name: "James Martinez",
+    email: "james.martinez@twill.ai",
+    role: "Senior Sales Rep",
+    submissions: 41,
+    active: true,
+    volume: 2400000,
+    commission_structure: "Flat - 3.0%",
+    created_date: "2023-02-25T00:00:00Z",
+    last_login: "2024-01-20T12:10:00Z",
+    monthly_submissions: 11,
+    conversion_rate: 79,
+    total_commission: 72000
+  }
+];
+
 // Utility functions
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -410,6 +598,43 @@ export const mockDataService = {
     await delay(200);
     Object.assign(mockUser, updates);
     return { data: mockUser };
+  },
+
+  async getUsers(options = {}) {
+    await delay(200);
+    
+    let users = [...mockUsers];
+    
+    // Apply filters
+    if (options.filters) {
+      users = filterData(users, options.filters);
+    }
+    
+    // Apply sorting
+    if (options.sort) {
+      users = sortData(users, options.sort);
+    }
+    
+    // Apply pagination
+    const skip = options.skip || 0;
+    const limit = options.limit || users.length;
+    users = users.slice(skip, skip + limit);
+    
+    return {
+      data: users,
+      total: mockUsers.length,
+      skip,
+      limit
+    };
+  },
+
+  async getUser(userId) {
+    await delay(150);
+    const user = mockUsers.find(u => u.user_id === userId);
+    if (!user) {
+      throw new Error(`User ${userId} not found`);
+    }
+    return { data: user };
   },
 
   // Fee schedule operations
