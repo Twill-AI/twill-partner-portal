@@ -318,18 +318,6 @@ const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh, init
       }
     },
     {
-      id: 'business_type',
-      header: 'Type',
-      accessor: 'business_type',
-      width: '120px',
-      sortable: true,
-      cell: (row) => (
-        <div>
-          <p className="text-sm text-black50">{row.business_type || 'Unknown'}</p>
-        </div>
-      )
-    },
-    {
       id: 'volume',
       header: 'Volume',
       accessor: 'volume',
@@ -409,6 +397,41 @@ const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh, init
           </div>
         </div>
       )
+    },
+    {
+      id: 'mca',
+      header: 'MCA',
+      width: '180px',
+      cell: (row) => {
+        if (!row.mca) {
+          return (
+            <div className="text-center">
+              <span className="text-sm text-gray-400">No MCA</span>
+            </div>
+          );
+        }
+        
+        const { total_amount, paid_amount } = row.mca;
+        const percentage = (paid_amount / total_amount) * 100;
+        
+        return (
+          <div className="space-y-2">
+            <div className="flex justify-between text-xs">
+              <span className="font-medium text-black50">${(paid_amount / 1000).toFixed(0)}K</span>
+              <span className="text-gray-500">${(total_amount / 1000).toFixed(0)}K</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div 
+                className="bg-gradient-to-r from-emerald-500 to-emerald-600 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${Math.min(percentage, 100)}%` }}
+              ></div>
+            </div>
+            <div className="text-xs text-center text-gray-600">
+              {percentage.toFixed(1)}% paid
+            </div>
+          </div>
+        );
+      }
     },
     {
       id: 'actions',

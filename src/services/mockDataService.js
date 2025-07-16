@@ -70,7 +70,15 @@ const mockMerchants = [
     notes: "High-performing tech merchant with excellent payment history",
     fee_schedule_id: "fee_002", // Premium Processing
     source: "EMS",
-    rep: "Sarah Johnson"
+    rep: "Sarah Johnson",
+    mca: {
+      total_amount: 150000,
+      paid_amount: 112500,
+      remaining_amount: 37500,
+      daily_payment: 850,
+      start_date: "2023-06-01T00:00:00Z",
+      estimated_completion: "2024-01-15T00:00:00Z"
+    }
   },
   {
     merchant_id: "mer_002",
@@ -99,7 +107,15 @@ const mockMerchants = [
     notes: "Sustainable retail business with growing transaction volume",
     fee_schedule_id: "fee_001", // Standard Processing
     source: "LUQRA",
-    rep: "Michael Chen"
+    rep: "Michael Chen",
+    mca: {
+      total_amount: 75000,
+      paid_amount: 22500,
+      remaining_amount: 52500,
+      daily_payment: 425,
+      start_date: "2024-01-15T00:00:00Z",
+      estimated_completion: "2024-08-20T00:00:00Z"
+    }
   },
   {
     merchant_id: "mer_003",
@@ -129,7 +145,15 @@ const mockMerchants = [
     status_message: "Please provide 3 months bank statements.",
     fee_schedule_id: "fee_003", // High Risk Processing
     source: "ELAVON",
-    rep: "Emily Rodriguez"
+    rep: "Emily Rodriguez",
+    mca: {
+      total_amount: 200000,
+      paid_amount: 45000,
+      remaining_amount: 155000,
+      daily_payment: 1200,
+      start_date: "2024-03-01T00:00:00Z",
+      estimated_completion: "2024-12-15T00:00:00Z"
+    }
   },
   {
     merchant_id: "mer_004",
@@ -158,7 +182,8 @@ const mockMerchants = [
     notes: "New merchant pending approval",
     fee_schedule_id: "fee_001",
     source: "NEXIO",
-    rep: "David Kim"
+    rep: "David Kim",
+    mca: null
   },
   {
     merchant_id: "mer_005",
@@ -187,7 +212,15 @@ const mockMerchants = [
     notes: "Gym membership and personal training services",
     fee_schedule_id: "fee_002",
     source: "EMS",
-    rep: "Sarah Johnson"
+    rep: "Sarah Johnson",
+    mca: {
+      total_amount: 100000,
+      paid_amount: 85000,
+      remaining_amount: 15000,
+      daily_payment: 650,
+      start_date: "2023-12-01T00:00:00Z",
+      estimated_completion: "2024-08-01T00:00:00Z"
+    }
   }
 ];
 
@@ -350,6 +383,7 @@ const mockUsers = [
     created_date: "2023-01-15T00:00:00Z",
     last_login: "2024-01-20T14:30:00Z",
     monthly_submissions: 12,
+    active_this_month: 9,
     conversion_rate: 78,
     total_commission: 89250
   },
@@ -365,6 +399,7 @@ const mockUsers = [
     created_date: "2023-03-10T00:00:00Z",
     last_login: "2024-01-20T16:45:00Z",
     monthly_submissions: 10,
+    active_this_month: 8,
     conversion_rate: 82,
     total_commission: 58800
   },
@@ -380,6 +415,7 @@ const mockUsers = [
     created_date: "2023-06-20T00:00:00Z",
     last_login: "2024-01-19T11:20:00Z",
     monthly_submissions: 8,
+    active_this_month: 6,
     conversion_rate: 75,
     total_commission: 41250
   },
@@ -395,6 +431,7 @@ const mockUsers = [
     created_date: "2023-08-05T00:00:00Z",
     last_login: "2024-01-20T09:15:00Z",
     monthly_submissions: 6,
+    active_this_month: 4,
     conversion_rate: 68,
     total_commission: 30000
   },
@@ -410,6 +447,7 @@ const mockUsers = [
     created_date: "2023-10-12T00:00:00Z",
     last_login: "2024-01-18T13:40:00Z",
     monthly_submissions: 4,
+    active_this_month: 3,
     conversion_rate: 73,
     total_commission: 19125
   },
@@ -425,6 +463,7 @@ const mockUsers = [
     created_date: "2023-04-18T00:00:00Z",
     last_login: "2024-01-10T10:30:00Z",
     monthly_submissions: 0,
+    active_this_month: 0,
     conversion_rate: 71,
     total_commission: 48600
   },
@@ -440,6 +479,7 @@ const mockUsers = [
     created_date: "2022-11-08T00:00:00Z",
     last_login: "2024-01-20T17:20:00Z",
     monthly_submissions: 14,
+    active_this_month: 12,
     conversion_rate: 85,
     total_commission: 112000
   },
@@ -455,6 +495,7 @@ const mockUsers = [
     created_date: "2023-02-25T00:00:00Z",
     last_login: "2024-01-20T12:10:00Z",
     monthly_submissions: 11,
+    active_this_month: 9,
     conversion_rate: 79,
     total_commission: 72000
   }

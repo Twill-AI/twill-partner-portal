@@ -114,13 +114,7 @@ export default function Users() {
           <h1 className="text-3xl font-bold text-black50">Users</h1>
           <p className="text-gray100 mt-1">Manage your sales team and track performance</p>
         </div>
-        <button
-          onClick={handleAddUser}
-          className="transition p-1.5 px-2 font-medium focus:outline-none flex items-center space-x-0.5 whitespace-nowrap hover:bg-gray100 stroke-black50 rounded-md clickable shadow-sm text-[13px] bg-gradient-to-r from-azure100 to-periwinkle50 text-white hover:from-azure100/90 hover:to-periwinkle50/90"
-        >
-          <Plus className="w-4 h-4 mr-2" />
-          Add User
-        </button>
+
       </div>
 
       {/* Sales Dashboard Metrics */}
@@ -184,9 +178,15 @@ export default function Users() {
                     <p className="text-sm text-gray100">{user.role}</p>
                   </div>
                 </div>
-                <div className="text-right">
-                  <p className="font-semibold text-black50">{user.monthly_submissions}</p>
-                  <p className="text-sm text-gray100">submissions</p>
+                <div className="text-right flex items-center gap-4">
+                  <div>
+                    <p className="font-semibold text-black50">{user.monthly_submissions}</p>
+                    <p className="text-sm text-gray100">submissions</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-semibold text-emerald-600">{user.active_this_month || 0}</p>
+                    <p className="text-sm text-emerald-500">active</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -229,14 +229,23 @@ export default function Users() {
       {/* Users Table */}
       <div className="bg-white rounded-xl shadow-md shadow-[rgba(13,10,44,0.08)]">
         <div className="p-6 border-b border-gray80/30">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-gradient-to-br from-azure100 to-periwinkle50">
-              <UsersIcon className="w-5 h-5 text-white" />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-azure100 to-periwinkle50">
+                <UsersIcon className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-black50">Sales Team</h3>
+                <p className="text-sm text-gray100">Manage users and track performance metrics</p>
+              </div>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-black50">Sales Team</h3>
-              <p className="text-sm text-gray100">Manage users and track performance metrics</p>
-            </div>
+            <button
+              onClick={handleAddUser}
+              className="transition p-1.5 px-2 font-medium focus:outline-none flex items-center space-x-0.5 whitespace-nowrap hover:bg-gray100 stroke-black50 rounded-md clickable shadow-sm text-[13px] bg-gradient-to-r from-azure100 to-periwinkle50 text-white hover:from-azure100/90 hover:to-periwinkle50/90"
+            >
+              <Plus className="w-4 h-4 mr-2" />
+              Add User
+            </button>
           </div>
         </div>
         <UserTable users={users} />
