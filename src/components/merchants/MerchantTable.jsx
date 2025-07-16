@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import TableHeader from "@/components/ui/table/TableHeader";
 import TableActions from "@/components/ui/table/TableActions";
+import ActionRequiredModal from './ActionRequiredModal';
 import { 
   MoreHorizontal, 
   RefreshCw, 
@@ -99,6 +100,8 @@ const getStatusIcon = (status) => {
       return <Clock className="w-3.5 h-3.5 text-yellow-500" />;
     case 'in_review':
       return <AlertCircle className="w-3.5 h-3.5 text-blue-500" />;
+    case 'action_required':
+      return <AlertTriangle className="w-3.5 h-3.5 text-orange-500" />;
     case 'rejected':
       return <X className="w-3.5 h-3.5 text-red-500" />;
     default:
@@ -132,6 +135,7 @@ const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh, init
   });
   const [activeTab, setActiveTab] = useState(initialTab);
   const [filteredMerchants, setFilteredMerchants] = useState([]);
+  const [actionRequiredModal, setActionRequiredModal] = useState({ isOpen: false, merchant: null });
 
   // Update total count when merchants change
   useEffect(() => {
@@ -245,6 +249,7 @@ const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh, init
     { id: 'active', label: 'Active', count: merchants.filter(m => m.status === 'active').length },
     { id: 'pending', label: 'Pending', count: merchants.filter(m => m.status === 'pending').length },
     { id: 'in_review', label: 'In Review', count: merchants.filter(m => m.status === 'in_review').length },
+    { id: 'action_required', label: 'Action Required', count: merchants.filter(m => m.status === 'action_required').length },
     { id: 'rejected', label: 'Rejected', count: merchants.filter(m => m.status === 'rejected').length },
   ];
 
@@ -278,13 +283,26 @@ const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh, init
           active: { color: 'bg-green-100 text-green-800', icon: getStatusIcon('active') },
           pending: { color: 'bg-yellow-100 text-yellow-800', icon: getStatusIcon('pending') },
           in_review: { color: 'bg-blue-100 text-blue-800', icon: getStatusIcon('in_review') },
+          action_required: { color: 'bg-orange-100 text-orange-800', icon: getStatusIcon('action_required') },
           rejected: { color: 'bg-red-100 text-red-800', icon: getStatusIcon('rejected') },
           unknown: { color: 'bg-gray-100 text-gray-800', icon: getStatusIcon('unknown') }
         };
         
+        const handleStatusClick = () => {
+          if (status === 'action_required') {
+            setActionRequiredModal({ isOpen: true, merchant: row });
+          }
+        };
+        
         return (
           <div className="flex items-center space-x-1">
-            <Badge variant="outline" className={`${statusConfig[status].color} border-none`}>
+            <Badge 
+              variant="outline" 
+              className={`${statusConfig[status].color} border-none ${
+                status === 'action_required' ? 'cursor-pointer hover:opacity-80 transition-opacity' : ''
+              }`}
+              onClick={handleStatusClick}
+            >
               <span className="mr-1">{statusConfig[status].icon}</span>
               {status.replace('_', ' ')}
             </Badge>
@@ -640,6 +658,13 @@ const MerchantTable = ({ merchants, isLoading, onMerchantSelect, onRefresh, init
           </tfoot>
         </table>
       </div>
+      
+      {/* Action Required Modal */}
+      <ActionRequiredModal
+        isOpen={actionRequiredModal.isOpen}
+        onClose={() => setActionRequiredModal({ isOpen: false, merchant: null })}
+        merchant={actionRequiredModal.merchant}
+      />
     </div>
   );
 };
