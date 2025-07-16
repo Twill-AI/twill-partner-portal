@@ -4,12 +4,14 @@ import { useDataSource } from '@/contexts/DataSourceContext';
 import { mockDataService } from '@/services/mockDataService';
 import MetricCard from '@/components/dashboard/MetricCard';
 import { UserTable } from '@/components/users/UserTable';
+import AddUserModal from '@/components/users/AddUserModal';
 
 export default function Users() {
   const [users, setUsers] = useState([]);
   const [merchants, setMerchants] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isAddUserModalOpen, setIsAddUserModalOpen] = useState(false);
   const { dataSource } = useDataSource();
 
   useEffect(() => {
@@ -70,8 +72,11 @@ export default function Users() {
     .slice(0, 3);
 
   const handleAddUser = () => {
-    // TODO: Implement add user modal
-    console.log('Add user clicked');
+    setIsAddUserModalOpen(true);
+  };
+
+  const handleCreateUser = (newUser) => {
+    setUsers(prevUsers => [...prevUsers, newUser]);
   };
 
   if (loading) {
@@ -201,7 +206,7 @@ export default function Users() {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-black50">Top Performers - Volume</h3>
-              <p className="text-sm text-gray100">Based on total processing volume</p>
+              <p className="text-sm text-gray100">Based on approved processing volume this month</p>
             </div>
           </div>
           <div className="space-y-3">
@@ -250,6 +255,13 @@ export default function Users() {
         </div>
         <UserTable users={users} />
       </div>
+      
+      {/* Add User Modal */}
+      <AddUserModal
+        isOpen={isAddUserModalOpen}
+        onClose={() => setIsAddUserModalOpen(false)}
+        onCreateUser={handleCreateUser}
+      />
     </div>
   );
 }
