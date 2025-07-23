@@ -12,10 +12,14 @@ import {
   Shield,
   FileText,
   Settings,
-  UserCheck
+  UserCheck,
+  Plus
 } from "lucide-react";
 import { CompactDataSourceToggle } from "@/components/ui/DataSourceToggle";
 import { TwillPaymentLogoFull } from "@/components/ui/TwillLogo";
+import AddUserModal from "@/components/users/AddUserModal";
+import AddMerchantModal from "@/components/merchants/AddMerchantModal";
+import { Button } from "@/components/ui/button";
 import {
   Sidebar,
   SidebarContent,
@@ -69,18 +73,57 @@ const navigationItems = [
   },
 ];
 
+
 export default function Layout({ children, currentPageName }) {
   const location = useLocation();
   const { dataSource } = useDataSource();
   const isPayEngineMode = dataSource === DataSource.PAYENGINE_SANDBOX;
+
+  const [showAddMenu, setShowAddMenu] = React.useState(false);
+  const [showAddUserModal, setShowAddUserModal] = React.useState(false);
+  const [showAddMerchantModal, setShowAddMerchantModal] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('.relative')) {
+        setShowAddMenu(false);
+      }
+    };
+    if (showAddMenu) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showAddMenu]);
 
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full linear-background">
         <Sidebar className="border-r border-gray40 bg-card">
           <SidebarHeader className="border-b border-gray40 p-6">
-            <div className="flex items-center justify-center">
-              <TwillPaymentLogoFull className="h-10 w-auto" />
+            <div className="flex items-center justify-between">
+              <div className="flex items-center justify-center">
+                <TwillPaymentLogoFull className="h-10 w-auto" />
+              </div>
+              <div className="relative">
+                <Button
+                  variant="iconButton"
+                  aria-label="Add"
+                  onClick={() => setShowAddMenu((prev) => !prev)}
+                  style={{marginLeft: 12}}
+                >
+                  <Plus />
+                </Button>
+                {showAddMenu && (
+                  <div className="absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+                    <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setShowAddMenu(false); setShowAddUserModal(true); }}>Add User</button>
+                    <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => { setShowAddMenu(false); setShowAddMerchantModal(true); }}>Add Merchant</button>
+                  </div>
+                )}
+              </div>
             </div>
           </SidebarHeader>
           

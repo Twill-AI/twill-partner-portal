@@ -43,9 +43,15 @@ export default function MetricCard({
               <TrendingDown className="w-4 h-4 text-error" />
             )}
             <span className={`font-medium ${trendDirection === 'up' ? 'text-green' : 'text-error'}`}>
-              {trend}
+              {typeof trend === 'object' && trend !== null && trend.percent !== undefined
+                ? `${trend.percent > 0 ? '+' : ''}${trend.percent}%`
+                : trend}
             </span>
-            <span className="text-gray100">vs last month</span>
+            <span className="text-gray100">
+              {typeof trend === 'object' && trend !== null && trend.period
+                ? trend.period
+                : 'vs last month'}
+            </span>
           </div>
         </CardContent>
       )}

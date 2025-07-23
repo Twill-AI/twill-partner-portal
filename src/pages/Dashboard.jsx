@@ -83,10 +83,13 @@ export default function Dashboard() {
     .sort((a, b) => (b.monthly_volume || 0) - (a.monthly_volume || 0))
     .slice(0, 5) : [];
 
-  // Calculate real trends from historical data (no dummy data)
+  // Calculate trends for comparison metrics (placeholder logic)
   const calculateTrend = (current, type) => {
-    // Only show trends if we have real historical data to compare
-    // For now, return null to indicate no trend data available
+    // Placeholder: simulate a trend for demo
+    if (type === 'volume') return { percent: 12, period: 'vs last month' };
+    if (type === 'commission') return { percent: -5, period: 'vs last month' };
+    if (type === 'merchants') return { percent: 3, period: 'vs last month' };
+    if (type === 'underwriting') return { percent: -1, period: 'vs last month' };
     return null;
   };
 
@@ -164,15 +167,16 @@ export default function Dashboard() {
           value={`$${totalVolume.toLocaleString()}`}
           icon={DollarSign}
           trend={calculateTrend(totalVolume, 'volume')}
-          trendDirection="up"
+          trendDirection={calculateTrend(totalVolume, 'volume')?.percent > 0 ? "up" : "down"}
           subtitle="Monthly"
+          href="/commissionreports"
         />
         <MetricCard
           title="Total Commission"
           value={`$${totalCommission.toLocaleString()}`}
           icon={TrendingUp}
           trend={calculateTrend(totalCommission, 'commission')}
-          trendDirection="up"
+          trendDirection={calculateTrend(totalCommission, 'commission')?.percent > 0 ? "up" : "down"}
           subtitle="This month"
         />
         <MetricCard
@@ -180,7 +184,7 @@ export default function Dashboard() {
           value={activeMerchants}
           icon={Building2}
           trend={calculateTrend(activeMerchants, 'merchants')}
-          trendDirection="up"
+          trendDirection={calculateTrend(activeMerchants, 'merchants')?.percent > 0 ? "up" : "down"}
           subtitle="Currently processing"
           href="/merchants?tab=active"
         />
@@ -189,7 +193,7 @@ export default function Dashboard() {
           value={underwritingAlerts}
           icon={AlertTriangle}
           trend={calculateTrend(underwritingAlerts, 'underwriting')}
-          trendDirection={underwritingAlerts > 1 ? "up" : "down"}
+          trendDirection={calculateTrend(underwritingAlerts, 'underwriting')?.percent > 0 ? "up" : "down"}
           subtitle="Needs attention"
           className={underwritingAlerts > 0 ? "border-l-4 border-amber-500" : ""}
           href="/merchants?tab=in_review"

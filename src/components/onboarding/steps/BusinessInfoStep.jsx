@@ -6,24 +6,60 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Building2, Mail, Phone, Loader2 } from "lucide-react";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Building2, Mail, Phone, Loader2, Check, ChevronsUpDown } from "lucide-react";
 import { InvokeLLM } from "@/api/integrations";
+import { cn } from "@/lib/utils";
 
 export default function BusinessInfoStep({ data, onChange }) {
   const [websiteUrl, setWebsiteUrl] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
+  const [mccOpen, setMccOpen] = useState(false);
 
   const businessTypes = [
-    { value: 'RE', label: 'Retail', mcc: '5999' },
-    { value: 'RS', label: 'Restaurant', mcc: '5812' },
-    { value: 'PR', label: 'Professional Services', mcc: '5734' },
-    { value: 'HC', label: 'Healthcare', mcc: '8011' },
-    { value: 'AU', label: 'Automotive', mcc: '5511' },
-    { value: 'EC', label: 'E-commerce', mcc: '5964' },
-    { value: 'NP', label: 'Nonprofit', mcc: '8398' },
-    { value: 'SB', label: 'Subscription', mcc: '5968' },
-    { value: 'MP', label: 'Marketplace', mcc: '5967' },
-    { value: 'OT', label: 'Other', mcc: '5999' }
+    { value: 'PR', label: 'Sole Proprietorship', mcc: '5999' },
+    { value: 'PA', label: 'Partnership', mcc: '5999' },
+    { value: 'LLS', label: 'Single Member LLC', mcc: '5999' },
+    { value: 'LLM', label: 'Multiple Member LLC', mcc: '5999' },
+    { value: 'COC', label: 'C Corporation', mcc: '5999' },
+    { value: 'COS', label: 'S Corporation', mcc: '5999' },
+    { value: 'NPC', label: 'Nonprofit Corporation', mcc: '8398' },
+    { value: 'COP', label: 'Public Corporation', mcc: '5999' }
+  ];
+
+  const mccCodes = [
+    { value: '5812', label: '5812 - Eating Places, Restaurants' },
+    { value: '5814', label: '5814 - Fast Food Restaurants' },
+    { value: '5411', label: '5411 - Grocery Stores, Supermarkets' },
+    { value: '5311', label: '5311 - Department Stores' },
+    { value: '5732', label: '5732 - Electronics Stores' },
+    { value: '5734', label: '5734 - Computer Software Stores' },
+    { value: '5912', label: '5912 - Drug Stores and Pharmacies' },
+    { value: '5541', label: '5541 - Service Stations' },
+    { value: '5511', label: '5511 - Car and Truck Dealers' },
+    { value: '7011', label: '7011 - Hotels, Motels, and Resorts' },
+    { value: '8011', label: '8011 - Doctors' },
+    { value: '8021', label: '8021 - Dentists and Orthodontists' },
+    { value: '8398', label: '8398 - Organizations, Charitable and Social Service' },
+    { value: '5964', label: '5964 - Direct Marketing - Catalog Merchant' },
+    { value: '5968', label: '5968 - Direct Marketing - Continuity/Subscription' },
+    { value: '5999', label: '5999 - Miscellaneous Specialty Retail' },
+    { value: '7372', label: '7372 - Computer Programming' },
+    { value: '7379', label: '7379 - Computer Maintenance and Repair' },
+    { value: '4816', label: '4816 - Computer Network Services' },
+    { value: '5045', label: '5045 - Computers and Computer Equipment' },
+    { value: '5942', label: '5942 - Book Stores' },
+    { value: '5943', label: '5943 - Stationery, Office Supply Stores' },
+    { value: '5944', label: '5944 - Jewelry Stores' },
+    { value: '5945', label: '5945 - Hobby, Toy, and Game Shops' },
+    { value: '5992', label: '5992 - Florists' },
+    { value: '7230', label: '7230 - Barber and Beauty Shops' },
+    { value: '7298', label: '7298 - Health and Beauty Spas' },
+    { value: '7311', label: '7311 - Advertising Services' },
+    { value: '1520', label: '1520 - General Contractors' },
+    { value: '1711', label: '1711 - Heating, Plumbing, A/C' },
+    { value: '1731', label: '1731 - Electrical Contractors' }
   ];
 
   const handleInputChange = (field, value) => {
@@ -184,6 +220,57 @@ export default function BusinessInfoStep({ data, onChange }) {
                   {isGenerating ? <Loader2 className="w-5 h-5 animate-spin" /> : 'Generate'}
                 </Button>
             </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="mcc_code">MCC Code *</Label>
+            <Popover open={mccOpen} onOpenChange={setMccOpen}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  role="combobox"
+                  aria-expanded={mccOpen}
+                  className="h-12 w-full justify-between"
+                >
+                  {data.business_details?.mcc_code
+                    ? mccCodes.find((mcc) => mcc.value === data.business_details.mcc_code)?.label
+                    : "Select MCC code..."}
+                  <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-full p-0">
+                <Command>
+                  <CommandInput placeholder="Search MCC codes..." />
+                  <CommandList>
+                    <CommandEmpty>No MCC code found.</CommandEmpty>
+                    <CommandGroup>
+                      {mccCodes.map((mcc) => (
+                        <CommandItem
+                          key={mcc.value}
+                          value={mcc.value}
+                          onSelect={(currentValue) => {
+                            const selectedMcc = currentValue === data.business_details?.mcc_code ? "" : currentValue;
+                            handleInputChange('business_details', {
+                              ...data.business_details,
+                              mcc_code: selectedMcc
+                            });
+                            setMccOpen(false);
+                          }}
+                        >
+                          <Check
+                            className={cn(
+                              "mr-2 h-4 w-4",
+                              data.business_details?.mcc_code === mcc.value ? "opacity-100" : "opacity-0"
+                            )}
+                          />
+                          {mcc.label}
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
+              </PopoverContent>
+            </Popover>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
